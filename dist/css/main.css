@@ -68,14 +68,86 @@ table {
 }
 
 /* 1. Main Layout ================================= */
+html, body {
+	height: 100%;
+}
+
 * {
 	box-sizing: border-box;
 }
 
 body {
-	background: #ccc;
+	background: #887373;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 /* 2. Content ================================= */
+.row {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
+	-webkit-box-pack: justify;
+	        justify-content: space-between;
+}
+
+.row .column {
+	width: 50%;
+}
+
+.row .slideshow {
+	display: -webkit-box;
+	display: flex;
+	background-color: #f90c38;
+}
+
+.row .about-me {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	        justify-content: center;
+	background-color: #fcc653;
+	padding: 5%;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 1rem;
+	line-height: 1.4rem;
+}
+
+.row .about-me h1 {
+	font-family: "Vast Shadow", cursive;
+	font-size: 2.25rem;
+	margin: 2%;
+}
+
+.row .about-me h2 {
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 2rem;
+	margin: 4%;
+}
+
+.row .about-me p {
+	width: 100%;
+	margin: 4%;
+}
+
+.row .about-me button {
+	width: 50%;
+	height: 50px;
+	margin: 4%;
+	background-color: #d25941;
+	font-size: 1rem;
+	font-family: "Josefin Sans", sans-serif;
+}
+
+footer {
+	width: 100%;
+	height: 25%;
+	background-color: #5f0F40;
+}
 
 /*# sourceMappingURL=main.css.map */

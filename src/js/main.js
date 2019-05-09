@@ -1,3 +1,3 @@
-console.log(`Hello World from main.js! 
+console.log(`Hello Chello from main.js! 
 Change this message, and make sure it changes in the browser 
 to verify that you're working in the right files.`)
