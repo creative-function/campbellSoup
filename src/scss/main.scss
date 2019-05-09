@@ -48,7 +48,7 @@ body {
 
 /* 2. Content ================================= */
 
-.row{
+.about-me{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -62,10 +62,23 @@ body {
 		display: flex;
 		background-color:$campTang;
 
+		.slide{
+			display: none;
+			
+			.picture{
+				position: relative;
+				width: 90%;
+				z-index: 50;
+			}
+		}
+
+		.showing{
+			display:block;
+		}
 		
 	}
 
-	.about-me{
+	.bio{
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -77,8 +90,9 @@ body {
 
 		h1{
 			font-family: $campVast;
-			font-size: 2.25rem;
+			font-size: 2.25em;
 			margin:2%;
+			
 		}
 		h2{
 			font-family: $campJose;

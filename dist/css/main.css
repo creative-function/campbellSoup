@@ -83,7 +83,7 @@ body {
 }
 
 /* 2. Content ================================= */
-.row {
+.about-me {
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: horizontal;
@@ -93,17 +93,31 @@ body {
 	        justify-content: space-between;
 }
 
-.row .column {
+.about-me .column {
 	width: 50%;
 }
 
-.row .slideshow {
+.about-me .slideshow {
 	display: -webkit-box;
 	display: flex;
 	background-color: #f90c38;
 }
 
-.row .about-me {
+.about-me .slideshow .slide {
+	display: none;
+}
+
+.about-me .slideshow .slide .picture {
+	position: relative;
+	width: 90%;
+	z-index: 50;
+}
+
+.about-me .slideshow .showing {
+	display: block;
+}
+
+.about-me .bio {
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
@@ -118,24 +132,24 @@ body {
 	line-height: 1.4rem;
 }
 
-.row .about-me h1 {
+.about-me .bio h1 {
 	font-family: "Vast Shadow", cursive;
-	font-size: 2.25rem;
+	font-size: 2.25em;
 	margin: 2%;
 }
 
-.row .about-me h2 {
+.about-me .bio h2 {
 	font-family: "Josefin Sans", sans-serif;
 	font-size: 2rem;
 	margin: 4%;
 }
 
-.row .about-me p {
+.about-me .bio p {
 	width: 100%;
 	margin: 4%;
 }
 
-.row .about-me button {
+.about-me .bio button {
 	width: 50%;
 	height: 50px;
 	margin: 4%;
