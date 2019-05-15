@@ -26,14 +26,30 @@ let slideshow = function(){
             currentSlide = 0
         }
 
-        //if $slide is currently showing
-        if($slides === currentSlide){
-            //add the showing class, which has display block
-            $slides[currentSlide].className.add("showing");
-        } else { //if it is not showing
-            //remove the showing class, slides set to display hidden 
-            $slides.className.remove("showing");
-        }
+
+        $slides.forEach(function($slide){
+
+            // //if $slide is currently showing
+            // if($slides === currentSlide){
+            //     //add the showing class, which has display block
+            //     $slides[currentSlide].className += "showing";
+            //     console.log("class added");
+            // } else {
+            //     $slides.className -= "showing";
+            // }
+
+
+            //turn off display on all slides
+
+            $slide.style.display = 'none';
+
+            //and if current slide is true, turn display on
+
+            if($slides[currentSlide]){
+                $slides[currentSlide].style.display = 'block';
+            }
+
+        })
 
 
         

@@ -113,8 +113,9 @@ body {
 	z-index: 50;
 }
 
-.about-me .slideshow .showing {
-	display: block;
+.about-me .slideshow .slide .deco2 {
+	position: absolute;
+	width: 50%;
 }
 
 .about-me .bio {
