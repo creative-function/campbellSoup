@@ -81,7 +81,7 @@ body {
 	max-width: 1200px;
 	margin: 0 auto;
 	overflow: hidden;
-	background-image: url(/dist/img/doodleSet2.png);
+	background-image: url(/dist/img/tacoSet2.png);
 	background-repeat: repeat;
 	background-size: contain;
 }
@@ -152,11 +152,6 @@ body {
 	}
 }
 
-.about-me .slideshow .slide .deco2 {
-	position: absolute;
-	width: 50%;
-}
-
 .about-me .bio {
 	display: -webkit-box;
 	display: flex;
@@ -172,7 +167,7 @@ body {
 }
 
 .about-me .bio h1 {
-	font-family: "Vast Shadow", cursive;
+	font-family: "Josefin Sans", sans-serif;
 	font-size: 2.25em;
 	margin: 2%;
 }

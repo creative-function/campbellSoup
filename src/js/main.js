@@ -48,9 +48,6 @@ let slideshow = function(){
             }
 
         })
-
-
-        
         
     }
     //call the function (load picture)
@@ -67,23 +64,31 @@ let slideshow = function(){
 
 
 
-// (function() {
-// 	let currentSlide = -1;
-// 	let $slides = document.querySelectorAll('.slideshow .slide')
+let backChange = (function() {
+	let currentSet = -1;
+    let $sets = [
+        "url(/dist/img/tacoSet2.png)",
+        "url(/dist/img/dogSet2.png)",
+        "url(/dist/img/beachSet2.png)",
+        "url(/dist/img/spaceSet2.png)",
+        "url(/dist/img/sketchSet2.png)",
+        "url(/dist/img/foodSet2.png)",
+    ];
+    let $setsContainer = document.getElementById('#Cs-body')
 
 
-// 	let changeSlide = function() {
-// 		currentSlide++
-// 		if (currentSlide >= $slides.length) {
-// 			currentSlide = 0
-// 		}
+	// let changeSets = function() {
+	// 	currentSet++
+	// 	if (currentSet >= $sets.length) {
+	// 		currentSet = 0
+	// 	}
 	 
-// 		$slides.forEach(function($slide) {
-// 			$slide.style.display = 'none'
-// 		})
-// 		$slides[currentSlide].style.display = 'block'
-// 	}
+	// 	$sets.forEach(function($set) {
+	// 		$set.style.backgroundImage = 'none'
+	// 	})
+	// 	$sets[currentSet].style.backgroundImage = 'block'
+	// }
 
-// 	changeSlide()
-// 	setInterval(changeSlide, 3000)
-// })();
+	// changeSets()
+	// setInterval(changeSets, 3000)
+})();

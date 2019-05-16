@@ -42,20 +42,22 @@ var slideshow = function slideshow() {
   setInterval(newSlide, 3000);
 }; //CALL SLIDESHOW: Turn on/off
 // slideshow();
-// (function() {
-// 	let currentSlide = -1;
-// 	let $slides = document.querySelectorAll('.slideshow .slide')
-// 	let changeSlide = function() {
-// 		currentSlide++
-// 		if (currentSlide >= $slides.length) {
-// 			currentSlide = 0
-// 		}
-// 		$slides.forEach(function($slide) {
-// 			$slide.style.display = 'none'
-// 		})
-// 		$slides[currentSlide].style.display = 'block'
-// 	}
-// 	changeSlide()
-// 	setInterval(changeSlide, 3000)
-// })();
+
+
+var backChange = function () {
+  var currentSet = -1;
+  var $sets = ["url(/dist/img/tacoSet2.png)", "url(/dist/img/dogSet2.png)", "url(/dist/img/beachSet2.png)", "url(/dist/img/spaceSet2.png)", "url(/dist/img/sketchSet2.png)", "url(/dist/img/foodSet2.png)"];
+  var $setsContainer = document.getElementById('#Cs-body'); // let changeSets = function() {
+  // 	currentSet++
+  // 	if (currentSet >= $sets.length) {
+  // 		currentSet = 0
+  // 	}
+  // 	$sets.forEach(function($set) {
+  // 		$set.style.backgroundImage = 'none'
+  // 	})
+  // 	$sets[currentSet].style.backgroundImage = 'block'
+  // }
+  // changeSets()
+  // setInterval(changeSets, 3000)
+}();
 //# sourceMappingURL=main.js.map

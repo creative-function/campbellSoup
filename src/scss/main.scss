@@ -44,7 +44,7 @@ body {
 	max-width: 1200px;
 	margin:0 auto;
 	overflow: hidden;
-	background-image: url(/dist/img/doodleSet2.png);
+	background-image: url(/dist/img/tacoSet2.png);
 	background-repeat: repeat;
 	background-size:contain; 
 
@@ -117,12 +117,6 @@ body {
 					left:20%;
 				}
 			}
-
-			.deco2{
-				position: absolute;
-				width: 50%;
-				
-			}
 		}
 		
 	}
@@ -139,7 +133,7 @@ body {
 		
 		
 		h1{
-			font-family: $campVast;
+			font-family: $campJose;
 			font-size: 2.25em;
 			margin:2%;
 			
