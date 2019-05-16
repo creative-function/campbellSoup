@@ -1,9 +1,6 @@
 console.log(`Hello Chello! slideshow.`);
 
 
-
-
-
 let slideshow = function(){
 
 
@@ -58,37 +55,109 @@ let slideshow = function(){
 };
 
 //CALL SLIDESHOW: Turn on/off
-// slideshow();
+slideshow();
 
 
 
+let changeDoodles = function(){
 
+    let $doodlesContainer = document.querySelector('#csBody');
 
-let backChange = (function() {
-	let currentSet = -1;
-    let $sets = [
+    console.log('changing doodles')
+    let currentDoodle=-1;
+
+    //create an array of all doodles
+    let $doodles = [
         "url(/dist/img/tacoSet2.png)",
         "url(/dist/img/dogSet2.png)",
         "url(/dist/img/beachSet2.png)",
         "url(/dist/img/spaceSet2.png)",
-        "url(/dist/img/sketchSet2.png)",
+        "url(/dist/img/doodleSet2.png)",
         "url(/dist/img/foodSet2.png)",
     ];
-    let $setsContainer = document.getElementById('#Cs-body')
+
+    let newDoodle = function(){
+        
+
+        //add the next doodle
+        currentDoodle ++
+        console.log('showing doodle: ', currentDoodle);
+    
+        //if doodle reaches the end of its length
+        if(currentDoodle >= $doodles.length){
+            //start the doodles at the first img
+            currentDoodle = 0
+        }
 
 
-	// let changeSets = function() {
-	// 	currentSet++
-	// 	if (currentSet >= $sets.length) {
-	// 		currentSet = 0
-	// 	}
+        
+
+            //if background image does not match current backround
+
+            if($doodles[currentDoodle] !== $doodlesContainer.style.backgroundImage){
+
+                // then manke backgrounds the same
+                $doodlesContainer.style.backgroundImage = $doodles[currentDoodle];
+             }
+        
+    }
+    //call the function (load picture)
+    newDoodle()
+
+    //every 3 seconcs, call it again (change picture)
+    setInterval(newDoodle, 3000)
+};
+
+
+//CALL DOODELS: Turn on/off
+changeDoodles();
+
+
+
+
+// let $setsContainer = document.querySelector('#csBody');
+
+// let backChange = (function() {
+// 	let currentSet = -1;
+    
+//     let $sets = [
+//         "url(/dist/img/tacoSet2.png)",
+//         "url(/dist/img/dogSet2.png)",
+//         "url(/dist/img/beachSet2.png)",
+//         "url(/dist/img/spaceSet2.png)",
+//         "url(/dist/img/sketchSet2.png)",
+//         "url(/dist/img/foodSet2.png)",
+//     ];
+
+//     //every 3 seconds, pick an index number
+//     // translate index into string
+//     // if string does not match current backround
+//     //make string new background
+//     //else if strings match, do nothing (code will run again)
+    
+//     let swap = function(){
+        
+//         for (let s=0; s < $sets.length; s++){ // d =0, so long as it is below 4, print and increase d by one.
+//             console.log("s: " + s)
+//         }
+//     }
+
+
+// 	// let changeSets = function() {
+// 	// 	currentSet++
+// 	// 	if (currentSet >= $sets.length) {
+// 	// 		currentSet = 0
+// 	// 	}
 	 
-	// 	$sets.forEach(function($set) {
-	// 		$set.style.backgroundImage = 'none'
-	// 	})
-	// 	$sets[currentSet].style.backgroundImage = 'block'
-	// }
+// 	// 	$sets.forEach(function($set) {
+// 	// 		$set.style.backgroundImage = 'none'
+// 	// 	})
+// 	// 	$setsContainer.style.backgroundImage = $sets[currentSet];
+// 	// }
 
-	// changeSets()
-	// setInterval(changeSets, 3000)
-})();
+
+
+    
+// 	// changeSets()
+// 	setInterval(swap, 3000);
+// })();

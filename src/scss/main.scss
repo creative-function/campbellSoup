@@ -65,7 +65,7 @@ body {
 
 
 	@media #{$tablet}{
-		flex-direction: row;
+		flex-direction: row-reverse;
 	}
 
 
@@ -79,7 +79,7 @@ body {
 
 		position: absolute;
 		top: -5%;
-		z-index: -100;
+		z-index:-100;
 		width: 170%;
 		height: 170%;
 		transform-origin: top left;
@@ -129,6 +129,10 @@ body {
 		font-family: $campJose;
 		font-size:1rem;
 		line-height: 1.4rem;
+		@media #{$tablet}{
+			background-color: $campGold;
+			opacity: .8;
+		}
 		
 		
 		
@@ -148,10 +152,6 @@ body {
 			width:100%;
 			margin:4%;
 			padding:2%;
-			@media #{$tablet}{
-				background-color: $campGold;
-				opacity: .8;
-			}
 			
 		}
 

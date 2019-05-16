@@ -101,8 +101,8 @@ body {
 @media (min-width: 600px) {
 	.about-me {
 		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-		        flex-direction: row;
+		-webkit-box-direction: reverse;
+		        flex-direction: row-reverse;
 	}
 }
 
@@ -166,6 +166,13 @@ body {
 	line-height: 1.4rem;
 }
 
+@media (min-width: 600px) {
+	.about-me .bio {
+		background-color: #fcc653;
+		opacity: .8;
+	}
+}
+
 .about-me .bio h1 {
 	font-family: "Josefin Sans", sans-serif;
 	font-size: 2.25em;
@@ -182,13 +189,6 @@ body {
 	width: 100%;
 	margin: 4%;
 	padding: 2%;
-}
-
-@media (min-width: 600px) {
-	.about-me .bio p {
-		background-color: #fcc653;
-		opacity: .8;
-	}
 }
 
 .about-me .bio button {
