@@ -77,30 +77,62 @@ html, body {
 }
 
 body {
-	background: #887373;
+	background: #fcc653;
 	max-width: 1200px;
 	margin: 0 auto;
+	overflow: hidden;
+	background-image: url(/dist/img/doodleSet2.png);
+	background-repeat: repeat;
+	background-size: contain;
 }
 
 /* 2. Content ================================= */
 .about-me {
 	display: -webkit-box;
 	display: flex;
-	-webkit-box-orient: horizontal;
+	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
-	        flex-direction: row;
+	        flex-direction: column;
 	-webkit-box-pack: justify;
 	        justify-content: space-between;
+	width: 100%;
+}
+
+@media (min-width: 600px) {
+	.about-me {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		        flex-direction: row;
+	}
+}
+
+.about-me .bkgrnd-angle {
+	position: absolute;
+	top: -5%;
+	z-index: -100;
+	width: 170%;
+	height: 170%;
+	-webkit-transform-origin: top left;
+	        transform-origin: top left;
+	background-color: #f90c38;
+	border-color: transparent transparent #000000 transparent;
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
 }
 
 .about-me .column {
-	width: 50%;
+	width: 100%;
+}
+
+@media (min-width: 600px) {
+	.about-me .column {
+		width: 50%;
+	}
 }
 
 .about-me .slideshow {
 	display: -webkit-box;
 	display: flex;
-	background-color: #f90c38;
 }
 
 .about-me .slideshow .slide {
@@ -109,8 +141,15 @@ body {
 
 .about-me .slideshow .slide .picture {
 	position: relative;
-	width: 90%;
-	z-index: 50;
+	width: 40%;
+	left: 30%;
+}
+
+@media (min-width: 600px) {
+	.about-me .slideshow .slide .picture {
+		width: 80%;
+		left: 20%;
+	}
 }
 
 .about-me .slideshow .slide .deco2 {
@@ -126,7 +165,6 @@ body {
 	        flex-direction: column;
 	-webkit-box-pack: center;
 	        justify-content: center;
-	background-color: #fcc653;
 	padding: 5%;
 	font-family: "Josefin Sans", sans-serif;
 	font-size: 1rem;
@@ -148,6 +186,14 @@ body {
 .about-me .bio p {
 	width: 100%;
 	margin: 4%;
+	padding: 2%;
+}
+
+@media (min-width: 600px) {
+	.about-me .bio p {
+		background-color: #fcc653;
+		opacity: .8;
+	}
 }
 
 .about-me .bio button {
@@ -161,7 +207,7 @@ body {
 
 footer {
 	width: 100%;
-	height: 25%;
+	height: 150px;
 	background-color: #5f0F40;
 }
 

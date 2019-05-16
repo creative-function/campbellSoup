@@ -40,9 +40,9 @@ var slideshow = function slideshow() {
   newSlide(); //every 3 seconcs, call it again (change picture)
 
   setInterval(newSlide, 3000);
-};
-
-slideshow(); // (function() {
+}; //CALL SLIDESHOW: Turn on/off
+// slideshow();
+// (function() {
 // 	let currentSlide = -1;
 // 	let $slides = document.querySelectorAll('.slideshow .slide')
 // 	let changeSlide = function() {

@@ -37,8 +37,6 @@ let slideshow = function(){
             // } else {
             //     $slides.className -= "showing";
             // }
-
-
             //turn off display on all slides
 
             $slide.style.display = 'none';
@@ -62,8 +60,12 @@ let slideshow = function(){
     setInterval(newSlide, 3000)
 };
 
+//CALL SLIDESHOW: Turn on/off
+// slideshow();
 
-slideshow();
+
+
+
 
 // (function() {
 // 	let currentSlide = -1;
