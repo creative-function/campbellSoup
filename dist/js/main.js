@@ -8,7 +8,7 @@ var slideshow = function slideshow() {
 
   var $slides = document.querySelectorAll('.slide');
 
-  var newSlide = function newSlide() {
+  var nextSlide = function nextSlide() {
     //add the next slide
     currentSlide++;
     console.log('showing image: ', currentSlide); //if slide reaches the end of its length
@@ -37,9 +37,9 @@ var slideshow = function slideshow() {
   }; //call the function (load picture)
 
 
-  newSlide(); //every 3 seconcs, call it again (change picture)
+  nextSlide(); //every 3 seconcs, call it again (change picture)
 
-  setInterval(newSlide, 3000);
+  setInterval(nextSlide, 3000);
 }; //CALL SLIDESHOW: Turn on/off
 
 
@@ -74,9 +74,8 @@ var changeDoodles = function changeDoodles() {
 
   setInterval(newDoodle, 3000);
 }; //CALL DOODELS: Turn on/off
-
-
-changeDoodles(); // let $setsContainer = document.querySelector('#csBody');
+// changeDoodles();
+// let $setsContainer = document.querySelector('#csBody');
 // let backChange = (function() {
 // 	let currentSet = -1;
 //     let $sets = [

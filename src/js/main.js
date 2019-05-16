@@ -5,12 +5,12 @@ let slideshow = function(){
 
 
     console.log('starting slideshow')
-    let currentSlide=-1;
+    let currentSlide = -1;
 
     //use ALL to grab all elements with that class name
     let $slides = document.querySelectorAll('.slide');
 
-    let newSlide = function(){
+    let nextSlide = function(){
         
 
         //add the next slide
@@ -18,7 +18,7 @@ let slideshow = function(){
         console.log('showing image: ', currentSlide);
     
         //if slide reaches the end of its length
-        if(currentSlide >= $slides.length){
+        if (currentSlide >= $slides.length){
             //start the slide at the first img
             currentSlide = 0
         }
@@ -40,7 +40,7 @@ let slideshow = function(){
 
             //and if current slide is true, turn display on
 
-            if($slides[currentSlide]){
+            if ($slides[currentSlide]) {
                 $slides[currentSlide].style.display = 'block';
             }
 
@@ -48,10 +48,10 @@ let slideshow = function(){
         
     }
     //call the function (load picture)
-    newSlide()
+    nextSlide()
 
     //every 3 seconcs, call it again (change picture)
-    setInterval(newSlide, 3000)
+    setInterval(nextSlide, 3000)
 };
 
 //CALL SLIDESHOW: Turn on/off
@@ -89,9 +89,6 @@ let changeDoodles = function(){
             currentDoodle = 0
         }
 
-
-        
-
             //if background image does not match current backround
 
             if($doodles[currentDoodle] !== $doodlesContainer.style.backgroundImage){
@@ -110,7 +107,7 @@ let changeDoodles = function(){
 
 
 //CALL DOODELS: Turn on/off
-changeDoodles();
+// changeDoodles();
 
 
 

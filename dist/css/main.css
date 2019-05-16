@@ -81,9 +81,6 @@ body {
 	max-width: 1200px;
 	margin: 0 auto;
 	overflow: hidden;
-	background-image: url(/dist/img/tacoSet2.png);
-	background-repeat: repeat;
-	background-size: contain;
 }
 
 @media (min-width: 600px) {
