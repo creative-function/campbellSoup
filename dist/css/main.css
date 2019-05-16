@@ -86,8 +86,20 @@ body {
 	background-size: contain;
 }
 
+@media (min-width: 600px) {
+	body {
+		background-color: #d25941;
+	}
+}
+
 /* 2. Content ================================= */
-.about-me {
+.overflow-wrapper {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+
+.overflow-wrapper .about-me {
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
@@ -99,16 +111,17 @@ body {
 }
 
 @media (min-width: 600px) {
-	.about-me {
+	.overflow-wrapper .about-me {
 		-webkit-box-orient: horizontal;
-		-webkit-box-direction: reverse;
-		        flex-direction: row-reverse;
+		-webkit-box-direction: normal;
+		        flex-direction: row;
+		flex-direction: row-reverse;
 	}
 }
 
-.about-me .bkgrnd-angle {
+.overflow-wrapper .about-me .bkgrnd-angle {
 	position: absolute;
-	top: -5%;
+	top: -45%;
 	z-index: -100;
 	width: 170%;
 	height: 170%;
@@ -120,39 +133,45 @@ body {
 	        transform: rotate(45deg);
 }
 
-.about-me .column {
+@media (min-width: 600px) {
+	.overflow-wrapper .about-me .bkgrnd-angle {
+		background-color: #fcc653;
+	}
+}
+
+.overflow-wrapper .about-me .column {
 	width: 100%;
 }
 
 @media (min-width: 600px) {
-	.about-me .column {
+	.overflow-wrapper .about-me .column {
 		width: 50%;
 	}
 }
 
-.about-me .slideshow {
+.overflow-wrapper .about-me .slideshow {
 	display: -webkit-box;
 	display: flex;
 }
 
-.about-me .slideshow .slide {
+.overflow-wrapper .about-me .slideshow .slide {
 	display: none;
 }
 
-.about-me .slideshow .slide .picture {
+.overflow-wrapper .about-me .slideshow .slide .picture {
 	position: relative;
 	width: 40%;
 	left: 30%;
 }
 
 @media (min-width: 600px) {
-	.about-me .slideshow .slide .picture {
+	.overflow-wrapper .about-me .slideshow .slide .picture {
 		width: 80%;
 		left: 20%;
 	}
 }
 
-.about-me .bio {
+.overflow-wrapper .about-me .bio {
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
@@ -166,32 +185,25 @@ body {
 	line-height: 1.4rem;
 }
 
-@media (min-width: 600px) {
-	.about-me .bio {
-		background-color: #fcc653;
-		opacity: .8;
-	}
-}
-
-.about-me .bio h1 {
+.overflow-wrapper .about-me .bio h1 {
 	font-family: "Josefin Sans", sans-serif;
 	font-size: 2.25em;
 	margin: 2%;
 }
 
-.about-me .bio h2 {
+.overflow-wrapper .about-me .bio h2 {
 	font-family: "Josefin Sans", sans-serif;
 	font-size: 2rem;
 	margin: 4%;
 }
 
-.about-me .bio p {
+.overflow-wrapper .about-me .bio p {
 	width: 100%;
 	margin: 4%;
 	padding: 2%;
 }
 
-.about-me .bio button {
+.overflow-wrapper .about-me .bio button {
 	width: 50%;
 	height: 50px;
 	margin: 4%;
@@ -200,7 +212,7 @@ body {
 	font-family: "Josefin Sans", sans-serif;
 }
 
-footer {
+.overflow-wrapper footer {
 	width: 100%;
 	height: 150px;
 	background-color: #5f0F40;

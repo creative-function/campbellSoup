@@ -48,6 +48,9 @@ body {
 	background-repeat: repeat;
 	background-size:contain; 
 
+	@media #{$tablet}{
+		background-color: $campRed;
+	}
 
 }
 
@@ -56,118 +59,128 @@ body {
 
 /* 2. Content ================================= */
 
-
-.about-me{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+.overflow-wrapper{
 	width: 100%;
+	height: auto;
+	overflow: hidden;
+	
 
-
-	@media #{$tablet}{
-		flex-direction: row-reverse;
-	}
-
-
-	.bkgrnd-angle{
-		// width:100%;
-		// height: 100%;
-		// position: absolute;
-		// background-color: aqua;
-		// z-index: -100;
-		// overflow: hidden;
-
-		position: absolute;
-		top: -5%;
-		z-index:-100;
-		width: 170%;
-		height: 170%;
-		transform-origin: top left;
-		background-color: $campTang;
-		border-color: transparent transparent #000000 transparent;
-		transform: rotate(45deg);
-		
-		
-		
-	}
-
-	.column{
-		width:100%;
-
-		@media #{$tablet}{
-			width:50%;
-		}
-		
-	}
-
-	.slideshow{
-		display: flex;
-		
-
-		.slide{
-			display: none;
-			
-			.picture{
-				position: relative;
-				width: 40%;
-				left:30%;
-
-				@media #{$tablet}{
-					width: 80%;
-					left:20%;
-				}
-			}
-		}
-		
-	}
-
-	.bio{
+	.about-me{
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		padding:5%;
-		font-family: $campJose;
-		font-size:1rem;
-		line-height: 1.4rem;
+		justify-content: space-between;
+		width: 100%;
+	
+	
 		@media #{$tablet}{
-			background-color: $campGold;
-			opacity: .8;
+			flex-direction: row;
+			flex-direction: row-reverse;
 		}
-		
-		
-		
-		h1{
-			font-family: $campJose;
-			font-size: 2.25em;
-			margin:2%;
+	
+	
+		.bkgrnd-angle{
+			// width:100%;
+			// height: 100%;
+			// position: absolute;
+			// background-color: aqua;
+			// z-index: -100;
+			// overflow: hidden;
+	
+			position: absolute;
+			top: -45%;
+			z-index: -100;
+			width: 170%;
+			height: 170%;
+			transform-origin: top left;
+			background-color: $campTang;
+			border-color: transparent transparent #000000 transparent;
+			transform: rotate(45deg);
+			
+			@media #{$tablet}{
+				background-color: $campGold;
+			}
+			
 			
 		}
-		h2{
-			font-family: $campJose;
-			font-size: 2rem;
-			margin:4%;
-		}
-		
-		p{
+	
+		.column{
 			width:100%;
-			margin:4%;
-			padding:2%;
+	
+			@media #{$tablet}{
+				width:50%;
+			}
 			
 		}
-
-		button{
-			width:50%;
-			height: 50px;
-			margin:4%;
-			background-color: $campRed;
-			font-size: 1rem;
+	
+		.slideshow{
+			display: flex;
+			
+	
+			.slide{
+				display: none;
+				
+				.picture{
+					position: relative;
+					width: 40%;
+					left:30%;
+	
+					@media #{$tablet}{
+						width: 80%;
+						left:20%;
+					}
+				}
+			}
+			
+		}
+	
+		.bio{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding:5%;
 			font-family: $campJose;
+			font-size:1rem;
+			line-height: 1.4rem;
+			// @media #{$tablet}{
+			// 	background-color: $campGold;
+			// 	opacity: .8;
+			// }
+			
+			
+			
+			h1{
+				font-family: $campJose;
+				font-size: 2.25em;
+				margin:2%;
+				
+			}
+			h2{
+				font-family: $campJose;
+				font-size: 2rem;
+				margin:4%;
+			}
+			
+			p{
+				width:100%;
+				margin:4%;
+				padding:2%;
+				
+			}
+	
+			button{
+				width:50%;
+				height: 50px;
+				margin:4%;
+				background-color: $campRed;
+				font-size: 1rem;
+				font-family: $campJose;
+			}
 		}
 	}
-}
 
-footer{
-	width:100%;
-	height: 150px;
-	background-color: $campPurp;
+	footer{
+		width:100%;
+		height: 150px;
+		background-color: $campPurp;
+	}
 }
