@@ -13,39 +13,61 @@ let slideshow = function(){
     let nextSlide = function(){
         
 
-        //add the next slide
+        // save the number of what used to be currentSlide as oldSlide
+        let oldSlide = currentSlide 
+
+        // and then change currentSlide to the next number
         currentSlide ++
-        console.log('showing image: ', currentSlide);
-    
+        
         //if slide reaches the end of its length
         if (currentSlide >= $slides.length){
             //start the slide at the first img
             currentSlide = 0
         }
+        console.log('showing image: ', currentSlide);
 
 
-        $slides.forEach(function($slide){
+        let tl = new TimelineMax()
 
-            // //if $slide is currently showing
-            // if($slides === currentSlide){
-            //     //add the showing class, which has display block
-            //     $slides[currentSlide].className += "showing";
-            //     console.log("class added");
-            // } else {
-            //     $slides.className -= "showing";
-            // }
-            //turn off display on all slides
+        if (oldSlide >= 0) {
+            // $slides[oldSlide].style.display = 'none';
+            // go into the .slide with index of oldSlide,
+            // and find it's img.picture child element
+            let oldSlideImage = $slides[oldSlide].querySelector('.picture')
+            // exit animation - fade out, and move down by 100 px
+            tl.to(oldSlideImage, 0.3, {opacity: 0, y: 100})
 
-            $slide.style.display = 'none';
+            if (oldSlide === 0 ) {
+                // here are the exit animations specifically for when slide 0 is leaving
+                let stamp = $slides[oldSlide].querySelector('.stamp')
+                tl.to(stamp, 0.5, {opacity: 0, x: 0}, "-=0.25")
 
-            //and if current slide is true, turn display on
-
-            if ($slides[currentSlide]) {
-                $slides[currentSlide].style.display = 'block';
+            } else if (oldSlide === 1 ) {
+                // here are the exit animations specifically for when slide 1 is leaving
+            } else if (oldSlide === 2 ) {
+                // here are the exit animations specifically for when slide 2 is leaving
+            } else if (oldSlide === 3 ) {
+                // here are the exit animations specifically for when slide 3 is leaving
             }
 
-        })
-        
+        }
+
+        // $slides[currentSlide].style.display = 'block';
+        let currentSlideImage = $slides[currentSlide].querySelector('.picture')
+        // enter animation - fade in, and move up to 0 px (default position)
+        tl.to(currentSlideImage, 0.5, {opacity: 1,  y: 0})
+
+        if (currentSlide === 0 ) {
+            // here are the enter animations specifically for when slide 0 is entering
+            let stamp = $slides[currentSlide].querySelector('.stamp')
+            tl.to(stamp, 0.5, {opacity: 1, x: 100})
+        } else if (currentSlide === 1 ) {
+            // here are the enter animations specifically for when slide 1 is entering
+        } else if (currentSlide === 2 ) {
+            // here are the enter animations specifically for when slide 2 is entering
+        } else if (currentSlide === 3 ) {
+            // here are the enter animations specifically for when slide 3 is entering
+        }
     }
     //call the function (load picture)
     nextSlide()

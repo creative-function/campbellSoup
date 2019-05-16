@@ -147,18 +147,20 @@ body {
 }
 
 .overflow-wrapper .about-me .slideshow {
-	display: -webkit-box;
-	display: flex;
+	position: relative;
 }
 
 .overflow-wrapper .about-me .slideshow .slide {
-	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
 }
 
 .overflow-wrapper .about-me .slideshow .slide .picture {
 	position: relative;
 	width: 40%;
 	left: 30%;
+	z-index: 100;
 }
 
 @media (min-width: 600px) {
@@ -166,6 +168,13 @@ body {
 		width: 80%;
 		left: 20%;
 	}
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide0 .stamp {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
 }
 
 .overflow-wrapper .about-me .bio {

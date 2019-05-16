@@ -113,20 +113,33 @@ body {
 		}
 	
 		.slideshow{
-			display: flex;
-			
+			// display: flex;
+			position: relative;
 	
 			.slide{
-				display: none;
+				position: absolute;
+				left: 0;
+				top: 0;
+				// display: none;
 				
 				.picture{
 					position: relative;
 					width: 40%;
 					left:30%;
+					z-index: 100;
 	
 					@media #{$tablet}{
 						width: 80%;
 						left:20%;
+					}
+				}
+
+				&.slide0 {
+					.stamp {
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 100%;
 					}
 				}
 			}
