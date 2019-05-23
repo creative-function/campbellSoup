@@ -22,7 +22,7 @@ $campVast:'Vast Shadow', cursive;
 
 $campWhite: #ffffff;
 $campRed: #d25941;
-$campGold: #fcc653;
+$campGold: #f2c96f;
 $campPurp: #5f0F40;
 $campTang: #f90c38;
 
@@ -40,16 +40,21 @@ html,body{
 }
 
 body {
+	
+	
 	background: $campGold;
 	max-width: 1200px;
 	margin:0 auto;
 	overflow: hidden;
-	// background-image: url(/dist/img/tacoSet2.png);
-	// background-repeat: repeat;
-	// background-size:contain; 
+	background-image:url(/dist/img/codeStamp.png);
+	background-size: contain;
+	background-position: center;
 
 	@media #{$tablet}{
-		background-color: $campRed;
+		// background-color: $campPurp;
+		background-image:url(/dist/img/codeStamp.png);
+		background-size: repeat;
+		background-position: center;
 	}
 
 }
@@ -63,6 +68,9 @@ body {
 	width: 100%;
 	height: auto;
 	overflow: hidden;
+	position: absolute;
+	top:25%;
+	
 	
 
 	.about-me{
@@ -115,6 +123,7 @@ body {
 		.slideshow{
 			// display: flex;
 			position: relative;
+			background-color: $campPurp;
 	
 			.slide{
 				position: absolute;
@@ -134,12 +143,23 @@ body {
 					}
 				}
 
+				.stamp{
+					position: absolute;
+					width: 100%; // style width per stamp when complete
+				}
+
 				&.slide0 {
 					.stamp {
-						position: absolute;
 						left: 0;
 						top: 0;
-						width: 100%;
+					}
+				}
+
+				&.slide1 {
+					.stamp {
+						left: 0;
+						top: 0;
+						
 					}
 				}
 			}
@@ -155,7 +175,7 @@ body {
 			font-size:1rem;
 			line-height: 1.4rem;
 			// @media #{$tablet}{
-			// 	background-color: $campGold;
+				background-color: $campPurp;
 			// 	opacity: .8;
 			// }
 			

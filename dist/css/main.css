@@ -77,15 +77,20 @@ html, body {
 }
 
 body {
-	background: #fcc653;
+	background: #f2c96f;
 	max-width: 1200px;
 	margin: 0 auto;
 	overflow: hidden;
+	background-image: url(/dist/img/codeStamp.png);
+	background-size: contain;
+	background-position: center;
 }
 
 @media (min-width: 600px) {
 	body {
-		background-color: #d25941;
+		background-image: url(/dist/img/codeStamp.png);
+		background-size: repeat;
+		background-position: center;
 	}
 }
 
@@ -94,6 +99,8 @@ body {
 	width: 100%;
 	height: auto;
 	overflow: hidden;
+	position: absolute;
+	top: 25%;
 }
 
 .overflow-wrapper .about-me {
@@ -132,7 +139,7 @@ body {
 
 @media (min-width: 600px) {
 	.overflow-wrapper .about-me .bkgrnd-angle {
-		background-color: #fcc653;
+		background-color: #f2c96f;
 	}
 }
 
@@ -148,6 +155,7 @@ body {
 
 .overflow-wrapper .about-me .slideshow {
 	position: relative;
+	background-color: #5f0F40;
 }
 
 .overflow-wrapper .about-me .slideshow .slide {
@@ -170,11 +178,19 @@ body {
 	}
 }
 
-.overflow-wrapper .about-me .slideshow .slide.slide0 .stamp {
+.overflow-wrapper .about-me .slideshow .slide .stamp {
 	position: absolute;
+	width: 100%;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide0 .stamp {
 	left: 0;
 	top: 0;
-	width: 100%;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide1 .stamp {
+	left: 0;
+	top: 0;
 }
 
 .overflow-wrapper .about-me .bio {
@@ -189,6 +205,7 @@ body {
 	font-family: "Josefin Sans", sans-serif;
 	font-size: 1rem;
 	line-height: 1.4rem;
+	background-color: #5f0F40;
 }
 
 .overflow-wrapper .about-me .bio h1 {
