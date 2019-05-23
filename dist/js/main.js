@@ -48,7 +48,14 @@ var slideshow = function slideshow() {
           opacity: 0,
           scale: 0
         }, "-=0.25");
-      } else if (oldSlide === 2) {// here are the exit animations specifically for when slide 2 is leaving
+      } else if (oldSlide === 2) {
+        // here are the exit animations specifically for when slide 2 is leaving
+        var _stamp2 = $slides[oldSlide].querySelector('.stamp');
+
+        tl.to(_stamp2, 0.5, {
+          opacity: 0,
+          scale: 0
+        }, "-=0.25");
       } else if (oldSlide === 3) {// here are the exit animations specifically for when slide 3 is leaving
       }
     } // $slides[currentSlide].style.display = 'block';
@@ -63,21 +70,28 @@ var slideshow = function slideshow() {
 
     if (currentSlide === 0) {
       // here are the enter animations specifically for when slide 0 is entering
-      var _stamp2 = $slides[currentSlide].querySelector('.stamp');
-
-      tl.to(_stamp2, 0.5, {
-        opacity: 1,
-        x: 100
-      });
-    } else if (currentSlide === 1) {
-      // here are the enter animations specifically for when slide 2 is entering
       var _stamp3 = $slides[currentSlide].querySelector('.stamp');
 
       tl.to(_stamp3, 0.5, {
         opacity: 1,
+        x: 10
+      });
+    } else if (currentSlide === 1) {
+      // here are the enter animations specifically for when slide 2 is entering
+      var _stamp4 = $slides[currentSlide].querySelector('.stamp');
+
+      tl.to(_stamp4, 0.5, {
+        opacity: 1,
         scale: 1
       });
-    } else if (currentSlide === 2) {} else if (currentSlide === 3) {// here are the enter animations specifically for when slide 3 is entering
+    } else if (currentSlide === 2) {
+      var _stamp5 = $slides[currentSlide].querySelector('.stamp');
+
+      tl.to(_stamp5, 0.5, {
+        opacity: 1,
+        x: 8
+      });
+    } else if (currentSlide === 3) {// here are the enter animations specifically for when slide 3 is entering
     }
   }; //call the function (load picture)
 

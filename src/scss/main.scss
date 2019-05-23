@@ -67,11 +67,12 @@ body {
 .overflow-wrapper{
 	width: 100%;
 	height: auto;
-	overflow: hidden;
-	position: absolute;
-	top:25%;
+
 	
-	
+	@media #{$tablet}{
+		margin: 10% auto;
+	}
+
 
 	.about-me{
 		display: flex;
@@ -85,31 +86,7 @@ body {
 			flex-direction: row-reverse;
 		}
 	
-	
-		.bkgrnd-angle{
-			// width:100%;
-			// height: 100%;
-			// position: absolute;
-			// background-color: aqua;
-			// z-index: -100;
-			// overflow: hidden;
-	
-			position: absolute;
-			top: -45%;
-			z-index: -100;
-			width: 170%;
-			height: 170%;
-			transform-origin: top left;
-			background-color: $campTang;
-			border-color: transparent transparent #000000 transparent;
-			transform: rotate(45deg);
-			
-			@media #{$tablet}{
-				background-color: $campGold;
-			}
-			
-			
-		}
+
 	
 		.column{
 			width:100%;
@@ -124,40 +101,56 @@ body {
 			// display: flex;
 			position: relative;
 			background-color: $campPurp;
+			height: 400px;
+
+			@media #{$tablet}{
+				height: auto;
+				overflow: hidden;
+			}
 	
 			.slide{
 				position: absolute;
 				left: 0;
 				top: 0;
+				
 				// display: none;
 				
 				.picture{
 					position: relative;
 					width: 40%;
-					left:30%;
+					left:25%;
 					z-index: 100;
-	
+					
 					@media #{$tablet}{
-						width: 80%;
-						left:20%;
+						width: 70%;
+						left:15%;
 					}
 				}
-
+				
 				.stamp{
 					position: absolute;
 					width: 100%; // style width per stamp when complete
 				}
-
+				
 				&.slide0 {
+				
 					.stamp {
-						left: 0;
+						left: -10px;
 						top: 0;
 					}
 				}
-
+				
 				&.slide1 {
 					.stamp {
 						left: 0;
+						top: 0;
+						
+					}
+				}
+
+				&.slide2 {
+					.stamp {
+						left: -10px;
 						top: 0;
 						
 					}
@@ -182,21 +175,25 @@ body {
 			
 			
 			h1{
+				width: 100%;
 				font-family: $campJose;
-				font-size: 2.25em;
+				font-size: 1.9rem;
 				margin:2%;
+				color: $campGold;
 				
 			}
 			h2{
 				font-family: $campJose;
-				font-size: 2rem;
+				font-size: 1.7rem;
 				margin:4%;
+				color: $campRed;
 			}
 			
 			p{
 				width:100%;
 				margin:4%;
 				padding:2%;
+				
 				
 			}
 	
@@ -207,13 +204,49 @@ body {
 				background-color: $campRed;
 				font-size: 1rem;
 				font-family: $campJose;
+				border:none;
 			}
 		}
 	}
 
-	footer{
-		width:100%;
-		height: 150px;
+	.footer{
 		background-color: $campPurp;
+		width:100%;
+		height: auto;
+		color:white;
+		display: flex;
+		flex-direction: column;
+		// position: absolute;
+		// bottom:0;
+		
+		@media #{$tablet}{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-evenly;
+		}
+	
+		// @media #{$desktop}{
+		// 	display: flex;
+		// 	flex-direction: row;
+		// 	justify-content: space-evenly;
+		// 	position: relative;
+		// 	bottom:0;
+		// }
+	
+		.footr{
+			margin:5%;
+			align-self: center;	
+	
+			h1{
+				text-align: center;
+				margin:10%;
+			}
+	
+			li{
+				margin:5% 0;
+				color:white;
+			}
+		}
+		
 	}
 }

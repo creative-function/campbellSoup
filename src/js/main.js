@@ -48,6 +48,8 @@ let slideshow = function(){
                 tl.to(stamp, 0.5, {opacity: 0, scale: 0}, "-=0.25")
             } else if (oldSlide === 2 ) {
                 // here are the exit animations specifically for when slide 2 is leaving
+                let stamp = $slides[oldSlide].querySelector('.stamp')
+                tl.to(stamp, 0.5, {opacity: 0, scale: 0}, "-=0.25")
             } else if (oldSlide === 3 ) {
                 // here are the exit animations specifically for when slide 3 is leaving
             }
@@ -62,13 +64,14 @@ let slideshow = function(){
         if (currentSlide === 0 ) {
             // here are the enter animations specifically for when slide 0 is entering
             let stamp = $slides[currentSlide].querySelector('.stamp')
-            tl.to(stamp, 0.5, {opacity: 1, x: 100})
+            tl.to(stamp, 0.5, {opacity: 1, x: 10})
         } else if (currentSlide === 1 ) {
                 // here are the enter animations specifically for when slide 2 is entering
                 let stamp = $slides[currentSlide].querySelector('.stamp')
                 tl.to(stamp, 0.5, {opacity: 1, scale:1})        
             } else if (currentSlide === 2 ){
-
+                let stamp = $slides[currentSlide].querySelector('.stamp')
+                tl.to(stamp, 0.5, {opacity: 1, x: 8})
             } else if (currentSlide === 3 ) {
             // here are the enter animations specifically for when slide 3 is entering
         }
