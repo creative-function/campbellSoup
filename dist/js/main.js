@@ -100,9 +100,8 @@ var slideshow = function slideshow() {
 
   setInterval(nextSlide, 3000);
 }; //CALL SLIDESHOW: Turn on/off
+// slideshow();
 
-
-slideshow();
 
 var changeDoodles = function changeDoodles() {
   var $doodlesContainer = document.querySelector('#csBody');
@@ -168,4 +167,14 @@ var changeDoodles = function changeDoodles() {
 // 	// changeSets()
 // 	setInterval(swap, 3000);
 // })();
+
+
+var $rocket = document.querySelector('.stampy');
+var tl_rocketFly = new TimelineMax();
+tl_rocketFly.from($rocket, 0.5, {
+  opacity: 1,
+  x: 25
+}).from($rocket, 1, {
+  y: -25
+});
 //# sourceMappingURL=main.js.map

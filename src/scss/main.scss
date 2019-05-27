@@ -120,6 +120,7 @@ body {
 					width: 40%;
 					left:25%;
 					z-index: 100;
+					opacity: 0;
 					
 					@media #{$tablet}{
 						width: 70%;
@@ -138,14 +139,22 @@ body {
 						left: -10px;
 						top: 0;
 					}
+
+					.stampy{
+						position: absolute;
+						width: 30%;
+						top:45%;
+						right:0;
+					}
 				}
 				
 				&.slide1 {
 					.stamp {
 						left: 0;
-						top: 0;
-						
+						top: 0;	
 					}
+
+
 				}
 
 				&.slide2 {

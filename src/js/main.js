@@ -84,7 +84,7 @@ let slideshow = function(){
 };
 
 //CALL SLIDESHOW: Turn on/off
-slideshow();
+// slideshow();
 
 
 
@@ -187,3 +187,11 @@ let changeDoodles = function(){
 // 	// changeSets()
 // 	setInterval(swap, 3000);
 // })();
+
+let $rocket = document.querySelector('.stampy');
+
+let tl_rocketFly = new TimelineMax();
+
+tl_rocketFly
+    .from($rocket, 0.5, {opacity: 1, x: 25})
+   .from($rocket,1,{y:-25})
