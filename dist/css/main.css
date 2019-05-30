@@ -150,15 +150,14 @@ body {
 
 .overflow-wrapper .about-me .slideshow .slide .picture {
 	position: relative;
-	width: 50%;
-	left: -25%;
-	-webkit-transform: translateY(250px) rotate(15deg);
-	        transform: translateY(250px) rotate(15deg);
+	width: 60%;
 	z-index: 100;
+	opacity: 0;
 }
 
 @media (min-width: 600px) {
 	.overflow-wrapper .about-me .slideshow .slide .picture {
+		position: relative;
 		width: 50%;
 		left: -25%;
 		-webkit-transform: translateY(250px) rotate(15deg);
@@ -168,6 +167,8 @@ body {
 
 .overflow-wrapper .about-me .slideshow .slide .stamp {
 	position: absolute;
+	opacity: 0;
+	display: none;
 	width: 100%;
 }
 
@@ -320,7 +321,7 @@ body {
 }
 
 .overflow-wrapper .about-me .slideshow .slide.slide3 .dog3-stampy {
-	bottom: 0px;
+	bottom: 20px;
 	right: 80px;
 }
 
@@ -332,6 +333,45 @@ body {
 .overflow-wrapper .about-me .slideshow .slide.slide3 .dog5-stampy {
 	left: 120px;
 	bottom: 50px;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide3 .dog6-stampy {
+	top: 200px;
+	right: 0;
+	-webkit-transform: rotate(30deg);
+	        transform: rotate(30deg);
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide3 .dog7-stampy {
+	left: 200px;
+	top: 80px;
+	-webkit-transform: rotate(-30deg);
+	        transform: rotate(-30deg);
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide3 .dog8-stampy {
+	left: 120px;
+	bottom: -20px;
+	-webkit-transform: rotate(30deg);
+	        transform: rotate(30deg);
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide3 .dog9-stampy {
+	left: 50px;
+	top: 180px;
+	-webkit-transform: rotate(-10deg);
+	        transform: rotate(-10deg);
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide3 .dog10-stampy {
+	top: 0;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide3 .dog11-stampy {
+	bottom: 0;
+	right: -20px;
+	-webkit-transform: rotate(10deg);
+	        transform: rotate(10deg);
 }
 
 .overflow-wrapper .about-me .bio {

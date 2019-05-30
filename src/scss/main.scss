@@ -79,6 +79,7 @@ body {
 		flex-direction: column;
 		justify-content: space-between;
 		width: 100%;
+		
 	
 	
 		@media #{$tablet}{
@@ -102,6 +103,7 @@ body {
 			position: relative;
 			background-color: $campPurp;
 			height: 400px;
+			
 
 			@media #{$tablet}{
 				height: auto;
@@ -113,17 +115,16 @@ body {
 				left: 0;
 				top: 0;
 				
-				// display: none;
 				
 				.picture{
 					position: relative;
-					width: 50%;
-					left:-25%;
-					transform: translateY(250px) rotate(15deg);
+					width: 60%;
+					
 					z-index: 100;
-					// opacity: 0;
+					opacity: 0;
 					
 					@media #{$tablet}{
+						position: relative;
 						width: 50%;
 						left:-25%;
 						transform: translateY(250px) rotate(15deg);
@@ -132,6 +133,8 @@ body {
 				
 				.stamp{
 					position: absolute;
+					opacity: 0;
+					display: none;
 					width: 100%; // style width per stamp when complete
 				}
 				
@@ -280,7 +283,7 @@ body {
 					}
 
 					.dog3-stampy{
-						bottom:0px;
+						bottom:20px;
 						right:80px;
 					}
 					
@@ -292,6 +295,41 @@ body {
 					.dog5-stampy{
 						left:120px;
 						bottom:50px;
+					}
+
+					.dog6-stampy{
+						top:200px;
+						right:0;
+						transform: rotate(30deg)
+					}
+
+					.dog7-stampy{
+						left:200px;
+						top:80px;
+						transform: rotate(-30deg)
+					}
+
+					.dog8-stampy{
+						left:120px;
+						bottom:-20px;
+						transform: rotate(30deg)
+					}
+
+					.dog9-stampy{
+						left:50px;
+						top:180px;
+						transform: rotate(-10deg);
+					}
+
+					.dog10-stampy{
+						top:0;
+						
+					}
+
+					.dog11-stampy{
+						bottom:0;
+						right:-20px;
+						transform: rotate(10deg);
 					}
 				}
 			}

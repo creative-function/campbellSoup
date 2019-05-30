@@ -35,47 +35,165 @@ var slideshow = function slideshow() {
 
       if (oldSlide === 0) {
         // here are the exit animations specifically for when slide 0 is leaving
-        var stamp = $slides[oldSlide].querySelector('.stamp');
-        tl.to(stamp, 0.5, {
-          opacity: 0,
-          x: 0
-        }, "-=0.25");
-      } else if (oldSlide === 1) {
-        // here are the exit animations specifically for when slide 1 is leaving
-        var _stamp = $slides[oldSlide].querySelector('.stamp');
-
-        tl.to(_stamp, 0.5, {
-          opacity: 0,
-          scale: 0
-        }, "-=0.25");
-      } else if (oldSlide === 2) {
-        // here are the exit animations specifically for when slide 2 is leaving
-        var _stamp2 = $slides[oldSlide].querySelector('.stamp');
-
-        var _$foods = document.querySelectorAll('.food-stampy');
-
-        var _tl_foodFight = new TimelineMax();
-
-        _tl_foodFight.staggerTo(_$foods, .8, {
-          scale: 0.5,
-          x: -100,
-          y: 50,
-          opacity: 0,
-          ease: Elastic.easeOut
-        }).fromTo(_stamp2, 1, {
-          opacity: 0,
+        var stamp = $slides[currentSlide].querySelector('.stamp');
+        var $rocket = document.querySelector('.rocket-stampy');
+        var $astro = document.querySelector('.astro1-stampy');
+        var tl_rocketFly = new TimelineMax();
+        tl_rocketFly.fromTo(stamp, 1, {
+          opacity: 1,
           y: 0,
           x: 0,
           rotation: 0,
           scale: 1
         }, {
-          opacity: 1,
-          y: -115,
+          opacity: 0,
+          y: 115,
           x: -190,
-          rotation: 30,
+          rotation: 50,
           scale: 0
-        });
-      } else if (oldSlide === 3) {// here are the exit animations specifically for when slide 3 is leaving
+        }, "rocket-exit").fromTo($astro, 1, {
+          opacity: 1,
+          y: 0,
+          x: 0,
+          rotation: 0,
+          scale: 1
+        }, {
+          opacity: 0,
+          y: 115,
+          x: -190,
+          rotation: 50,
+          scale: 0
+        }, "rocket-exit").fromTo($rocket, 1, {
+          opacity: 1,
+          y: 0,
+          x: 0,
+          rotation: 0,
+          scale: 1
+        }, {
+          opacity: 0,
+          y: 115,
+          x: -190,
+          rotation: 50,
+          scale: 0
+        }, "rocket-exit");
+      } else if (oldSlide === 1) {
+        // here are the exit animations specifically for when slide 1 is leaving
+        var _stamp = $slides[oldSlide].querySelector('.stamp');
+
+        var $foods = document.querySelectorAll('.food-stampy');
+        var tl_foodFight = new TimelineMax();
+        tl_foodFight.fromTo(_stamp, 1, {
+          opacity: 1,
+          y: 0,
+          x: 0,
+          rotation: 0,
+          scale: 1
+        }, {
+          opacity: 0,
+          y: 115,
+          x: -190,
+          rotation: 50,
+          scale: 0
+        }, "food-exit").fromTo($foods, 1, {
+          opacity: 1,
+          y: 0,
+          x: 0,
+          rotation: 0,
+          scale: 1
+        }, {
+          opacity: 0,
+          y: 115,
+          x: -190,
+          rotation: 50,
+          scale: 0
+        }, "food-exit");
+      } else if (oldSlide === 2) {
+        var _stamp2 = $slides[currentSlide].querySelector('.stamp');
+
+        var $thinks = document.querySelectorAll('.think-stampy');
+        var tl_thinker = new TimelineMax();
+        tl_thinker.fromTo(_stamp2, 1, {
+          opacity: 1,
+          y: 0,
+          x: 0,
+          rotation: 0,
+          scale: 1
+        }, {
+          opacity: 0,
+          y: 115,
+          x: -190,
+          rotation: 50,
+          scale: 0
+        }, "think-exit").staggerTo($thinks, 1, {
+          opacity: 1,
+          y: 0,
+          x: 0,
+          rotation: 0,
+          scale: 1
+        }, {
+          opacity: 0,
+          y: 115,
+          x: -190,
+          rotation: 50,
+          scale: 0
+        }, .2, "think-exit");
+      } else if (oldSlide === 3) {
+        // here are the exit animations specifically for when slide 3 is leaving
+        var _stamp3 = $slides[currentSlide].querySelector('.stamp');
+
+        var $borks = $slides[currentSlide].querySelectorAll('.dog-barky');
+        var $doggiesRT = document.querySelectorAll('.dog-stampy');
+        var $doggiesLFT = document.querySelectorAll('.dog-stampy-lft');
+        var tl_doggos = new TimelineMax();
+        tl_doggos.fromTo(_stamp3, 1, {
+          opacity: 1,
+          y: 0,
+          x: 0,
+          rotation: 0,
+          scale: 1
+        }, {
+          opacity: 0,
+          y: 115,
+          x: -190,
+          rotation: 50,
+          scale: 0
+        }, "dog-exit").fromTo($doggiesRT, 1, {
+          opacity: 1,
+          y: 0,
+          x: 0,
+          rotation: 0,
+          scale: 1
+        }, {
+          opacity: 0,
+          y: 115,
+          x: -190,
+          rotation: 50,
+          scale: 0
+        }, "dog-exit").fromTo($doggiesLFT, 1, {
+          opacity: 1,
+          y: 0,
+          x: 0,
+          rotation: 0,
+          scale: 1
+        }, {
+          opacity: 0,
+          y: 115,
+          x: -190,
+          rotation: 50,
+          scale: 0
+        }, "dog-exit").staggerTo($borks, 1, {
+          opacity: 1,
+          y: 0,
+          x: 0,
+          rotation: 0,
+          scale: 1
+        }, {
+          opacity: 0,
+          y: 115,
+          x: -190,
+          rotation: 50,
+          scale: 0
+        }, .2, "dog-exit");
       }
     } // $slides[currentSlide].style.display = 'block';
 
@@ -89,12 +207,15 @@ var slideshow = function slideshow() {
 
     if (currentSlide === 0) {
       // here are the enter animations specifically for when slide 0 is entering
-      var _stamp3 = $slides[currentSlide].querySelector('.stamp');
+      var _stamp4 = $slides[currentSlide].querySelector('.stamp');
 
-      var $rocket = document.querySelector('.rocket-stampy');
-      var $astro = document.querySelector('.astro1-stampy');
-      var tl_rocketFly = new TimelineMax();
-      tl_rocketFly.fromTo(_stamp3, 1, {
+      var _$rocket = document.querySelector('.rocket-stampy');
+
+      var _$astro = document.querySelector('.astro1-stampy');
+
+      var _tl_rocketFly = new TimelineMax();
+
+      _tl_rocketFly.fromTo(_stamp4, 1, {
         opacity: 0,
         y: 115,
         x: -190,
@@ -106,7 +227,7 @@ var slideshow = function slideshow() {
         x: 0,
         rotation: 0,
         scale: 1
-      }).fromTo($astro, 1, {
+      }).fromTo(_$astro, 1, {
         opacity: 0,
         y: -70,
         rotation: 0
@@ -115,13 +236,13 @@ var slideshow = function slideshow() {
         y: 130,
         rotation: -5,
         scale: .8
-      }).fromTo($astro, 2, {
+      }).fromTo(_$astro, 2, {
         rotation: -5
       }, {
         y: -15,
         rotation: 5,
         yoyo: true
-      }, "float").fromTo($rocket, 2.5, {
+      }, "float").fromTo(_$rocket, 2.5, {
         opacity: 0,
         y: -115,
         x: 125,
@@ -134,17 +255,17 @@ var slideshow = function slideshow() {
       }, "float+=.01");
     } else if (currentSlide === 1) {
       // here are the enter animations specifically for when slide 2 is entering
-      var _stamp4 = $slides[currentSlide].querySelector('.stamp');
+      var _stamp5 = $slides[currentSlide].querySelector('.stamp');
 
-      var _$foods2 = document.querySelectorAll('.food-stampy');
+      var _$foods = document.querySelectorAll('.food-stampy');
 
-      var _tl_foodFight2 = new TimelineLite();
+      var _tl_foodFight = new TimelineMax();
 
-      _tl_foodFight2.fromTo(_stamp4, 1, {
+      _tl_foodFight.fromTo(_stamp5, 1, {
         opacity: 0,
         y: -115,
-        x: 190,
-        rotation: -50,
+        x: -190,
+        rotation: 30,
         scale: 0
       }, {
         opacity: 1,
@@ -152,21 +273,72 @@ var slideshow = function slideshow() {
         x: 0,
         rotation: 0,
         scale: 1
-      }, "float").staggerFrom(_$foods2, .1, {
+      }, "foody").staggerFrom(_$foods, .8, {
+        scale: 0.5,
+        x: -100,
+        y: 50,
+        opacity: 1,
+        ease: Elastic.easeOut
+      }, .2, "foody+=.05");
+    } else if (currentSlide === 2) {
+      var _stamp6 = $slides[currentSlide].querySelector('.stamp');
+
+      var _$thinks = document.querySelectorAll('.think-stampy');
+
+      var _tl_thinker = new TimelineMax();
+
+      _tl_thinker.fromTo(_stamp6, 1, {
+        opacity: 0,
+        y: -115,
+        rotation: -130,
+        scale: 0
+      }, {
+        opacity: 1,
+        y: 0,
+        x: 0,
+        rotation: 0,
+        scale: 1
+      }, "think").staggerFrom(_$thinks, .8, {
         scale: 0.5,
         x: -100,
         y: 50,
         opacity: 0,
         ease: Elastic.easeOut
-      }, 0.2);
-    } else if (currentSlide === 2) {
-      var _stamp5 = $slides[currentSlide].querySelector('.stamp');
+      }, .2, "think");
+    } else if (currentSlide === 3) {
+      // here are the enter animations specifically for when slide 3 is entering
+      var _stamp7 = $slides[currentSlide].querySelector('.stamp');
 
-      tl.to(_stamp5, 0.5, {
+      var _$borks = document.querySelectorAll('.dog-barky');
+
+      var _$doggiesRT = document.querySelectorAll('.dog-stampy');
+
+      var _$doggiesLFT = document.querySelectorAll('.dog-stampy-lft');
+
+      var _tl_doggos = new TimelineMax();
+
+      _tl_doggos.fromTo(_stamp7, 1, {
+        opacity: 0,
+        y: -115,
+        x: -190,
+        rotation: 30,
+        scale: 0
+      }, {
         opacity: 1,
-        x: 8
-      });
-    } else if (currentSlide === 3) {// here are the enter animations specifically for when slide 3 is entering
+        y: 0,
+        x: 0,
+        rotation: 0,
+        scale: 1
+      }).staggerFrom(_$doggiesRT, 1, {
+        x: -100,
+        opacity: 0
+      }, .2, "dogs").staggerFrom(_$doggiesLFT, 1, {
+        x: 100,
+        opacity: 0
+      }, .2, "dogs").staggerFrom(_$borks, .8, {
+        scale: 0,
+        ease: Elastic.easeOut
+      }, .1, "dogs");
     }
   }; //call the function (load picture)
 
@@ -209,31 +381,21 @@ var changeDoodles = function changeDoodles() {
   setInterval(newDoodle, 3000);
 }; //CALL DOODELS: Turn on/off
 // changeDoodles();
-
-
-var $foods = document.querySelectorAll('.food-stampy');
-var tl_foodFight = new TimelineLite();
-var tl = new TimelineLite();
-tl_foodFight.fromTo($stamp, 1, {
-  opacity: 0,
-  y: -115,
-  x: 190,
-  rotation: -50,
-  scale: 0
-}, {
-  opacity: 1,
-  y: 0,
-  x: 0,
-  rotation: 0,
-  scale: 1
-}, "float");
-tl.staggerFrom($foods, .1, {
-  scale: 0.5,
-  x: -100,
-  y: 50,
-  opacity: 0,
-  ease: Elastic.easeOut
-}, 0.2); // let $setsContainer = document.querySelector('#csBody');
+// let $doggiesRT = document.querySelectorAll('.dog-stampy');
+// let $doggiesLFT = document.querySelectorAll('.dog-stampy-lft');
+// let $borks = document.querySelectorAll('.dog-barky');
+// let tl_doggos = new TimelineMax();
+// // on screen
+// tl_doggos
+//     .staggerFrom($doggiesRT, 1, {x:-100, opacity:0},.2,"dogs")
+//     .staggerFrom($doggiesLFT, 1, {x:100, opacity:0},.2,"dogs")
+//     .staggerFrom($borks,.8,{scale:0, ease:Elastic.easeOut},.1 )
+// // //OFF SCREEN
+// tl_doggos
+//     .staggerTo($borks,.8,{scale:0, ease:Elastic.easeOut},.1,"dogs" )
+//     .staggerTo($doggiesRT, 1, {x:500, opacity:0},.2,"dogs")
+//     .staggerTo($doggiesLFT, 1, {x:-500, opacity:0},.2,"dogs")
+// let $setsContainer = document.querySelector('#csBody');
 // let backChange = (function() {
 // 	let currentSet = -1;
 //     let $sets = [
