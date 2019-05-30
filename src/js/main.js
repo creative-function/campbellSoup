@@ -29,18 +29,23 @@ let slideshow = function(){
 
         let tl = new TimelineMax()
 
+      
+
         if (oldSlide >= 0) {
             // $slides[oldSlide].style.display = 'none';
             // go into the .slide with index of oldSlide,
             // and find it's img.picture child element
             let oldSlideImage = $slides[oldSlide].querySelector('.picture')
-            // exit animation - fade out, and move down by 100 px
-            tl.to(oldSlideImage, 0.3, {opacity: 0, y: 100})
+            // exit animation - fade out, and move right by 100 px
+            tl.to(oldSlideImage, 0.3, {opacity: 0, x: -100})
 
             if (oldSlide === 0 ) {
                 // here are the exit animations specifically for when slide 0 is leaving
                 let stamp = $slides[oldSlide].querySelector('.stamp')
                 tl.to(stamp, 0.5, {opacity: 0, x: 0}, "-=0.25")
+                
+            
+
 
             } else if (oldSlide === 1 ) {
                 // here are the exit animations specifically for when slide 1 is leaving
@@ -49,7 +54,13 @@ let slideshow = function(){
             } else if (oldSlide === 2 ) {
                 // here are the exit animations specifically for when slide 2 is leaving
                 let stamp = $slides[oldSlide].querySelector('.stamp')
-                tl.to(stamp, 0.5, {opacity: 0, scale: 0}, "-=0.25")
+                let $foods = document.querySelectorAll('.food-stampy');
+                let tl_foodFight = new TimelineMax();
+
+                tl_foodFight
+                    .staggerTo($foods, .8, {scale:0.5, x:-100, y:50, opacity:0, ease:Elastic.easeOut})
+                    .fromTo(stamp, 1, {opacity:0,y:0, x:0, rotation:0, scale:1},{opacity:1, y:-115, x:-190, rotation:30, scale:0})
+
             } else if (oldSlide === 3 ) {
                 // here are the exit animations specifically for when slide 3 is leaving
             }
@@ -59,16 +70,35 @@ let slideshow = function(){
         // $slides[currentSlide].style.display = 'block';
         let currentSlideImage = $slides[currentSlide].querySelector('.picture')
         // enter animation - fade in, and move up to 0 px (default position)
-        tl.to(currentSlideImage, 0.5, {opacity: 1,  y: 0})
+        tl.to(currentSlideImage, 0.5, {opacity: 1,  x:100})
 
         if (currentSlide === 0 ) {
             // here are the enter animations specifically for when slide 0 is entering
             let stamp = $slides[currentSlide].querySelector('.stamp')
-            tl.to(stamp, 0.5, {opacity: 1, x: 10})
+            let $rocket = document.querySelector('.rocket-stampy');
+            let $astro = document.querySelector('.astro1-stampy');
+            let tl_rocketFly = new TimelineMax();
+            
+            tl_rocketFly
+                .fromTo(stamp, 1, {opacity:0,y:115, x:-190, rotation:50, scale:0},{opacity:1, y:0, x:0, rotation:0, scale:1})
+                .fromTo($astro, 1, {opacity:0, y:-70, rotation:0}, {opacity:1, y:130,rotation:-5, scale:.8})
+                .fromTo($astro, 2, {rotation:-5},{ y:-15,rotation:5, yoyo:true}, "float")
+                .fromTo($rocket, 2.5, {opacity:0,y:-115, x:125, rotation:0},{opacity:1, y:450, x:-290, rotation:-50}, "float+=.01")
+                
+
         } else if (currentSlide === 1 ) {
                 // here are the enter animations specifically for when slide 2 is entering
-                let stamp = $slides[currentSlide].querySelector('.stamp')
-                tl.to(stamp, 0.5, {opacity: 1, scale:1})        
+                let stamp = $slides[currentSlide].querySelector('.stamp');  
+                let $foods = document.querySelectorAll('.food-stampy');
+                let tl_foodFight = new TimelineLite();
+               
+                tl_foodFight
+                    .fromTo(stamp, 1, {opacity:0,y:-115, x:190, rotation:-50, scale:0},{opacity:1, y:0, x:0, rotation:0, scale:1},"float")
+                    .staggerFrom($foods, .1, {scale:0.5, x:-100, y:50, opacity:0, ease:Elastic.easeOut}, 0.2);
+
+
+
+
             } else if (currentSlide === 2 ){
                 let stamp = $slides[currentSlide].querySelector('.stamp')
                 tl.to(stamp, 0.5, {opacity: 1, x: 8})
@@ -83,11 +113,11 @@ let slideshow = function(){
     setInterval(nextSlide, 3000)
 };
 
-//CALL SLIDESHOW: Turn on/off
-// slideshow();
+// CALL SLIDESHOW: Turn on/off
+slideshow();
 
 
-
+//doodles is bod background
 let changeDoodles = function(){
 
     let $doodlesContainer = document.querySelector('#csBody');
@@ -97,11 +127,11 @@ let changeDoodles = function(){
 
     //create an array of all doodles
     let $doodles = [
-        "url(/dist/img/tacoSet2.png)",
-        "url(/dist/img/dogSet2.png)",
-        "url(/dist/img/beachSet2.png)",
+        "url(/dist/img/thinkStamp.png)",
+        "url(/dist/img/spaceStamp2.png)",
+        "url(/dist/img/foodStamp1.png)",
         "url(/dist/img/spaceSet2.png)",
-        "url(/dist/img/doodleSet2.png)",
+        "url(/dist/img/codeStamp.png)",
         "url(/dist/img/foodSet2.png)",
     ];
 
@@ -141,6 +171,35 @@ let changeDoodles = function(){
 
 
 
+let $foods = document.querySelectorAll('.food-stampy');
+let tl_foodFight = new TimelineLite();
+
+let tl = new TimelineLite();
+
+tl_foodFight
+.fromTo($stamp, 1, {opacity:0,y:-115, x:190, rotation:-50, scale:0},{opacity:1, y:0, x:0, rotation:0, scale:1},"float")
+
+
+tl.staggerFrom($foods, .1, {scale:0.5, x:-100, y:50, opacity:0, ease:Elastic.easeOut}, 0.2)
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
 // let $setsContainer = document.querySelector('#csBody');
 
 // let backChange = (function() {
@@ -169,29 +228,21 @@ let changeDoodles = function(){
 //     }
 
 
-// 	// let changeSets = function() {
-// 	// 	currentSet++
-// 	// 	if (currentSet >= $sets.length) {
-// 	// 		currentSet = 0
-// 	// 	}
+// 	let changeSets = function() {
+// 		currentSet++
+// 		if (currentSet >= $sets.length) {
+// 			currentSet = 0
+// 		}
 	 
-// 	// 	$sets.forEach(function($set) {
-// 	// 		$set.style.backgroundImage = 'none'
-// 	// 	})
-// 	// 	$setsContainer.style.backgroundImage = $sets[currentSet];
-// 	// }
+// 		$sets.forEach(function($set) {
+// 			$set.style.backgroundImage = 'none'
+// 		})
+// 		$setsContainer.style.backgroundImage = $sets[currentSet];
+// 	}
 
 
 
     
-// 	// changeSets()
+// 	changeSets()
 // 	setInterval(swap, 3000);
 // })();
-
-let $rocket = document.querySelector('.stampy');
-
-let tl_rocketFly = new TimelineMax();
-
-tl_rocketFly
-    .from($rocket, 0.5, {opacity: 1, x: 25})
-   .from($rocket,1,{y:-25})

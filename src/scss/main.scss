@@ -53,7 +53,7 @@ body {
 	@media #{$tablet}{
 		// background-color: $campPurp;
 		background-image:url(/dist/img/codeStamp.png);
-		background-size: repeat;
+		// background-size: repeat;
 		background-position: center;
 	}
 
@@ -92,7 +92,7 @@ body {
 			width:100%;
 	
 			@media #{$tablet}{
-				width:50%;
+				// width:50%;
 			}
 			
 		}
@@ -117,14 +117,16 @@ body {
 				
 				.picture{
 					position: relative;
-					width: 40%;
-					left:25%;
+					width: 50%;
+					left:-25%;
+					transform: translateY(250px) rotate(15deg);
 					z-index: 100;
-					opacity: 0;
+					// opacity: 0;
 					
 					@media #{$tablet}{
-						width: 70%;
-						left:15%;
+						width: 50%;
+						left:-25%;
+						transform: translateY(250px) rotate(15deg);
 					}
 				}
 				
@@ -140,11 +142,20 @@ body {
 						top: 0;
 					}
 
-					.stampy{
+					.rocket-stampy{
 						position: absolute;
 						width: 30%;
 						top:45%;
 						right:0;
+					}
+
+					.astro1-stampy{
+						position: absolute;
+						width: 30%;
+						top:-10%;
+						left:10%;
+						opacity: 0;
+						
 					}
 				}
 				
@@ -152,6 +163,56 @@ body {
 					.stamp {
 						left: 0;
 						top: 0;	
+						width: 110%;
+					}
+
+					.stampy{
+						position: absolute;
+						width:16%;
+
+					}
+					.food1-stampy{
+						top:200px;
+						left:210px;
+					}
+					.food2-stampy{
+						right:-40px;
+						top:110px;
+					}.food3-stampy{
+						bottom:-50px;
+						left:210px;
+					}.food4-stampy{
+						left:90px;
+						top:180px;
+					}.food5-stampy{
+						right:60px;
+						top:70px;
+					}.food6-stampy{
+						right:40px;
+						top:200px;
+					}.food7-stampy{
+						left:120px;
+						top:25px;
+					}.food8-stampy{
+						top:80px;
+						left:220px;
+					}
+					.food9-stampy{
+						left:0;
+						top:120px;	
+					}
+					.food10-stampy{
+						bottom:10px;
+						right:85px;
+					}
+					.food11-stampy{
+						bottom:-55px;
+						left:95px;
+					}
+					
+					.food13-stampy{
+						bottom:0;
+						right:-65px;
 					}
 
 
@@ -159,9 +220,78 @@ body {
 
 				&.slide2 {
 					.stamp {
-						left: -10px;
-						top: 0;
-						
+						left: 0;
+						top: 0;	
+					}
+
+					.stampy{
+						position: absolute;
+						width:25%;
+					}
+
+					.think1-stampy{
+						left:50px;
+						top:35px;
+					}
+
+					.think2-stampy{
+						left:60px;
+						top:230px;
+					}
+
+					.think3-stampy{
+						right:80px;
+						top:65px;
+					}
+
+					.think4-stampy{
+						right:90px;
+						bottom:0;
+						width:15%;
+					}
+
+					.think5-stampy{
+						left:175px;
+						bottom:-50px;
+						width:20%;
+					}
+				}
+
+				&.slide3{
+					
+					.stamp {
+						left: 0px;
+						top: 0;	
+					}
+
+					.stampy{
+						position: absolute;
+						width:25%;
+					}
+
+					.dog1-stampy{
+						top:40px;
+						left:50px;
+					}
+
+					.dog2-stampy{
+						top:150px;
+						left:230px;
+					}
+
+					.dog3-stampy{
+						bottom:0px;
+						right:80px;
+					}
+					
+					.dog4-stampy{
+						right:-20px;
+						top:20px;
+					}
+
+					.dog5-stampy{
+						left:120px;
+						bottom:50px;
 					}
 				}
 			}

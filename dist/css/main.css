@@ -89,7 +89,6 @@ body {
 @media (min-width: 600px) {
 	body {
 		background-image: url(/dist/img/codeStamp.png);
-		background-size: repeat;
 		background-position: center;
 	}
 }
@@ -130,12 +129,6 @@ body {
 	width: 100%;
 }
 
-@media (min-width: 600px) {
-	.overflow-wrapper .about-me .column {
-		width: 50%;
-	}
-}
-
 .overflow-wrapper .about-me .slideshow {
 	position: relative;
 	background-color: #5f0F40;
@@ -157,16 +150,19 @@ body {
 
 .overflow-wrapper .about-me .slideshow .slide .picture {
 	position: relative;
-	width: 40%;
-	left: 25%;
+	width: 50%;
+	left: -25%;
+	-webkit-transform: translateY(250px) rotate(15deg);
+	        transform: translateY(250px) rotate(15deg);
 	z-index: 100;
-	opacity: 0;
 }
 
 @media (min-width: 600px) {
 	.overflow-wrapper .about-me .slideshow .slide .picture {
-		width: 70%;
-		left: 15%;
+		width: 50%;
+		left: -25%;
+		-webkit-transform: translateY(250px) rotate(15deg);
+		        transform: translateY(250px) rotate(15deg);
 	}
 }
 
@@ -180,21 +176,162 @@ body {
 	top: 0;
 }
 
-.overflow-wrapper .about-me .slideshow .slide.slide0 .stampy {
+.overflow-wrapper .about-me .slideshow .slide.slide0 .rocket-stampy {
 	position: absolute;
 	width: 30%;
 	top: 45%;
 	right: 0;
 }
 
+.overflow-wrapper .about-me .slideshow .slide.slide0 .astro1-stampy {
+	position: absolute;
+	width: 30%;
+	top: -10%;
+	left: 10%;
+	opacity: 0;
+}
+
 .overflow-wrapper .about-me .slideshow .slide.slide1 .stamp {
+	left: 0;
+	top: 0;
+	width: 110%;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide1 .stampy {
+	position: absolute;
+	width: 16%;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide1 .food1-stampy {
+	top: 200px;
+	left: 210px;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide1 .food2-stampy {
+	right: -40px;
+	top: 110px;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide1 .food3-stampy {
+	bottom: -50px;
+	left: 210px;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide1 .food4-stampy {
+	left: 90px;
+	top: 180px;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide1 .food5-stampy {
+	right: 60px;
+	top: 70px;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide1 .food6-stampy {
+	right: 40px;
+	top: 200px;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide1 .food7-stampy {
+	left: 120px;
+	top: 25px;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide1 .food8-stampy {
+	top: 80px;
+	left: 220px;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide1 .food9-stampy {
+	left: 0;
+	top: 120px;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide1 .food10-stampy {
+	bottom: 10px;
+	right: 85px;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide1 .food11-stampy {
+	bottom: -55px;
+	left: 95px;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide1 .food13-stampy {
+	bottom: 0;
+	right: -65px;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide2 .stamp {
 	left: 0;
 	top: 0;
 }
 
-.overflow-wrapper .about-me .slideshow .slide.slide2 .stamp {
-	left: -10px;
+.overflow-wrapper .about-me .slideshow .slide.slide2 .stampy {
+	position: absolute;
+	width: 25%;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide2 .think1-stampy {
+	left: 50px;
+	top: 35px;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide2 .think2-stampy {
+	left: 60px;
+	top: 230px;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide2 .think3-stampy {
+	right: 80px;
+	top: 65px;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide2 .think4-stampy {
+	right: 90px;
+	bottom: 0;
+	width: 15%;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide2 .think5-stampy {
+	left: 175px;
+	bottom: -50px;
+	width: 20%;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide3 .stamp {
+	left: 0px;
 	top: 0;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide3 .stampy {
+	position: absolute;
+	width: 25%;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide3 .dog1-stampy {
+	top: 40px;
+	left: 50px;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide3 .dog2-stampy {
+	top: 150px;
+	left: 230px;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide3 .dog3-stampy {
+	bottom: 0px;
+	right: 80px;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide3 .dog4-stampy {
+	right: -20px;
+	top: 20px;
+}
+
+.overflow-wrapper .about-me .slideshow .slide.slide3 .dog5-stampy {
+	left: 120px;
+	bottom: 50px;
 }
 
 .overflow-wrapper .about-me .bio {
