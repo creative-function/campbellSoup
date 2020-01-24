@@ -29,7 +29,7 @@ TABLE OF CONTENTS:
 }
 
 body {
-	background: $gridBlack;
+	background: $gridWhite;
 }
 
 /* 2. Content ================================= */
@@ -48,22 +48,21 @@ section#nav-section{
 		}
 
 		.nav-logo{
-			width:20%;
+			max-width:30%;
 			margin:0 auto;
+			//  background-color: lightcoral;
+			display: flex;
+			align-items: center;
 			img{
 				width: 100%;
 			}
 
 			@media#{$tablet}{
-				margin: 0 0;
+				margin: 0 .5%;
+				width: 9%;
+				// background-color: lightgreen;
 				img{
-					width: 50%;
-				}
-			}
-
-			@media#{$desktop}{
-				img{
-					width: 35%;
+					width: 100%;
 				}
 			}
 			
@@ -72,7 +71,7 @@ section#nav-section{
 		nav{
 			padding:20px;
 			ul{
-				color:white;
+				color:$gridHeading;
 				text-decoration: none;
 				display: flex;
 				font-family: $fontOpen;
@@ -82,10 +81,16 @@ section#nav-section{
 					padding:5px;
 					margin:10px;
 					text-decoration: none;
+
+					li:hover{
+						color:$gridOrange;
+					}
 				}
+
+
 				a:visited{
 					text-decoration: none;
-					color:$gridWhite;
+					color:$gridLink;
 				}
 			}
 		}
@@ -95,29 +100,44 @@ section#nav-section{
 
 section#titleCap{
 	
+	background-image: url("/dist/img/baby-dots.webp");
 	.page-title{
 
 		margin: 0 auto;
-		width: 80%;
-		text-align: center;
-		
-		h1{
-			font-family:$fontNun;
-			font-size: 3em;
-			color: $gridWhite;
-			margin: 5%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		.cc-name-imgs{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			align-items: center;
+			width:100%;
+			margin:0 auto;
+
+			img.cc-logo-dtop{
+				display: none;
+				@media#{$desktop}{
+					display: block;
+				}
+			}
 		}
 
-		.snippet{
-			font-family:$fontOpen;
-			font-size: 1.15em;
-			line-height: 1.5em;
-			color: $gridWhite;
+		.job-title{
+			font-family:$fontUnica;
+			font-size: 2em;
+			color: $gridLink;
 			padding: 10px;
+			display: flex;
+			justify-content: center;
+			h2{
+				text-align: center;
+				@media#{$tablet}{
+					margin-right:35px;
 
-			@media#{$tablet}{
-				width:50%;
-				margin: 0 auto;
+				} 
 			}
 
 		}
@@ -127,7 +147,7 @@ section#titleCap{
 
 section#portfolio.layout.layout-portfolio{
     padding: 20px 0;
-   
+    background-color: $gridBlack;
     .container{
         width:95%;
         margin:0 auto;
@@ -160,13 +180,13 @@ section#portfolio.layout.layout-portfolio{
 			background-position: center;
 			transition: all 0.2s ease-out;
 			
-			&.sp-photo2{
+			&.sp-photo2,&.sp-photo10{
 				background-size: 15%;
 				background-repeat: repeat-x;
 				background-position-y: 85%;		
 			}
 
-			&.sp-photo8,&.sp-photo5{
+			&.sp-photo5,&.sp-photo8,&.sp-photo11,&.sp-photo12,&.sp-photo13,&.sp-photo16{
 				background-size: contain;
 			}
 
@@ -223,6 +243,41 @@ section#portfolio.layout.layout-portfolio{
 	
 	.sp-photo8{
 		background-image: url("/dist/img/brazilbg1.jpg");
+		
+	}	
+
+	.sp-photo9{
+		background-image: url("/dist/img/mailchimp.png");
+		
+	}	
+
+	.sp-photo10{
+		background-image: url("/dist/img/news1.png");
+		
+	}
+
+	.sp-photo11{
+		background-image: url("/dist/img/news4.webp");
+		
+	}	
+	.sp-photo12{
+		background-image: url("/dist/img/news3.webp");
+		
+	}	
+	.sp-photo13{
+		background-image: url("/dist/img/chat1.png");
+		
+	}
+	.sp-photo14{
+		background-image: url("/dist/img/stamp1.png");
+		
+	}	
+	.sp-photo16{
+		background-image: url("/dist/img/social1.png");
+		
+	}	
+	.sp-photo15{
+		background-image: url("/dist/img/chelsea.jpg");
 		
 	}	
 
@@ -322,7 +377,8 @@ section#portfolio.layout.layout-portfolio{
 section#banner{
 	width:100%;
 	height: 50vh;
-	background-color: $gridHeading;
+	background-image: url("/dist/img/baby-dots.webp");
+	//background-color: $gridBody;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -333,25 +389,37 @@ section#banner{
 		padding:2%;
 		text-align: center;
 		font-family: $fontNun;
-		color:$gridLink;
+		color:$gridHeading;
 		font-size: 2em;
 	}
 
 	.ribbon{
 		width: 100%;
 		height: 50%;
-		background-color: $gridLink;
+		background-color: $gridBodyTint;
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
+		flex-wrap: wrap;
 		justify-content: space-around;
 		align-items: center;
 
-		@media#{$tablet}{
-			flex-direction:row;
-		}
 		.icon{
 			width:100px;
-			background-color:$gridGold;
+			display: flex;
+			justify-content: center;
+
+			img.abc{
+				width: 45%;
+				@media#{$tablet}{
+					width:80%;
+				}
+			}
+			img.def{
+				width: 55%;
+				@media#{$tablet}{
+					width:100%;
+				}
+			}
 		}
 	}
 }
