@@ -72,117 +72,397 @@ table {
 	box-sizing: border-box;
 }
 
-body, html {
-	background-color: #ccc;
-	height: 100%;
+body {
+	background: #09141e;
 }
 
 /* 2. Content ================================= */
-.floating-box {
-	position: absolute;
-	top: 10%;
-	left: 20%;
-	font-family: sans-serif;
-	width: 45%;
-	height: 50%;
-	max-width: 500px;
-	margin: 140px auto;
-	padding: 30px 20px 30px 30px;
-}
-
-.floating-box .foreground {
-	position: relative;
-	left: 10%;
-	top: 20%;
-	z-index: 2;
-	-webkit-transform: translateZ(100px);
-	        transform: translateZ(100px);
-}
-
-.floating-box .background {
-	position: absolute;
+section#nav-section {
 	width: 100%;
-	height: 100%;
-	top: 0;
-	background: #fcc653;
-	border-radius: 50%;
-	border: 2px solid #5f0F40;
-	z-index: 1;
-	-webkit-transition: 0.2s;
-	transition: 0.2s;
-	-webkit-transform: translateX(20px) perspective(600px) rotateY(15deg);
-	        transform: translateX(20px) perspective(600px) rotateY(15deg);
+	border-bottom: 3px white solid;
 }
 
-.floating-box .logo {
-	position: absolute;
-	top: -30px;
-	width: 60px;
-	z-index: 2;
-	-webkit-transform: translateZ(100px);
-	        transform: translateZ(100px);
-	-webkit-transition: 0.3s;
-	transition: 0.3s;
+section#nav-section .nav-menu {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
 }
 
-.floating-box .logo:hover {
-	-webkit-transform: rotate(-0.4turn);
-	        transform: rotate(-0.4turn);
+@media (min-width: 992px) {
+	section#nav-section .nav-menu {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		        flex-direction: row;
+		-webkit-box-pack: justify;
+		        justify-content: space-between;
+	}
 }
 
-.floating-box h1 {
-	font-family: "Vast Shadow", cursive;
-	font-size: 22pt;
-	margin: 15px 0;
+section#nav-section .nav-menu .nav-logo {
+	width: 20%;
+	margin: 0 auto;
 }
 
-.floating-box p {
-	color: #d25941;
-	font-family: "Josefin Sans", sans-serif;
-	line-height: 140%;
+section#nav-section .nav-menu .nav-logo img {
+	width: 100%;
+}
+
+@media (min-width: 992px) {
+	section#nav-section .nav-menu .nav-logo {
+		margin: 0 0;
+	}
+	section#nav-section .nav-menu .nav-logo img {
+		width: 50%;
+	}
+}
+
+@media (min-width: 1200px) {
+	section#nav-section .nav-menu .nav-logo img {
+		width: 35%;
+	}
+}
+
+section#nav-section .nav-menu nav {
+	padding: 20px;
+}
+
+section#nav-section .nav-menu nav ul {
+	color: white;
+	text-decoration: none;
+	display: -webkit-box;
+	display: flex;
+	font-family: "Open Sans", sans-serif;
+	-webkit-box-pack: center;
+	        justify-content: center;
+}
+
+section#nav-section .nav-menu nav ul a {
+	padding: 5px;
+	margin: 10px;
+	text-decoration: none;
+}
+
+section#nav-section .nav-menu nav ul a:visited {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+section#titleCap .page-title {
+	margin: 0 auto;
+	width: 80%;
 	text-align: center;
 }
 
-.menu {
-	position: absolute;
-	right: 0;
-	width: 250px;
-	height: auto;
-	background-color: #ffffff;
-	border: 3px solid #5f0F40;
-	font-size: 1.5rem;
-	font-family: "Fredericka the Great", cursive;
-}
-
-.menu a {
-	text-decoration: none;
-	color: #f90c38;
-}
-
-.menu .ul {
-	list-style: none;
-}
-
-.menu .nav {
-	margin: 20px;
-}
-
-.menu .nav-print {
-	font-size: .65rem;
+section#titleCap .page-title h1 {
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 3em;
+	color: #FFFFFF;
 	margin: 5%;
-	font-family: "Josefin Sans", sans-serif;
 }
 
-.top-can {
-	width: 100%;
-	height: 60%;
-	background-color: #f90c38;
+section#titleCap .page-title .snippet {
+	font-family: "Open Sans", sans-serif;
+	font-size: 1.15em;
+	line-height: 1.5em;
+	color: #FFFFFF;
+	padding: 10px;
 }
 
-.bottom-can {
+@media (min-width: 992px) {
+	section#titleCap .page-title .snippet {
+		width: 50%;
+		margin: 0 auto;
+	}
+}
+
+section#portfolio.layout.layout-portfolio {
+	padding: 20px 0;
+}
+
+section#portfolio.layout.layout-portfolio .container {
+	width: 95%;
+	margin: 0 auto;
+	max-width: 1440px;
+	position: relative;
+}
+
+section#portfolio.layout.layout-portfolio .portfolio-grid {
+	padding: 25px 0;
+	position: relative;
+	display: -webkit-box;
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	        justify-content: space-between;
+}
+
+section#portfolio.layout.layout-portfolio .portfolio-grid .single-project {
 	width: 100%;
-	height: 40%;
-	background-color: #ffffff;
+	text-align: center;
+	margin: 15px 0;
+	position: relative;
+	padding: 0 15px;
+	height: 275px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+
+section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo2 {
+	background-size: 15%;
+	background-repeat: repeat-x;
+	background-position-y: 85%;
+}
+
+section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo8, section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo5 {
+	background-size: contain;
+}
+
+section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo7 {
+	background-position-y: 5%;
+}
+
+@media (min-width: 768px) {
+	section#portfolio.layout.layout-portfolio .portfolio-grid .single-project {
+		width: 49%;
+		height: 250px;
+	}
+}
+
+@media (min-width: 992px) {
+	section#portfolio.layout.layout-portfolio .portfolio-grid .single-project {
+		width: 29%;
+		height: 200px;
+	}
+}
+
+@media (min-width: 1200px) {
+	section#portfolio.layout.layout-portfolio .portfolio-grid .single-project {
+		width: 24%;
+		height: 200px;
+	}
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo1 {
+	background-image: url("/dist/img/tsr+cover@2x.jpg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo2 {
+	background-image: url("/dist/img/history-img.png");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo3 {
+	background-image: url("/dist/img/adidas-img.png");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo4 {
+	background-image: url("/dist/img/redFight.png");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo5 {
+	background-image: url("/dist/img/beanLight.svg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo6 {
+	background-image: url("/dist/img/clc-img.jpeg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo7 {
+	background-image: url("/dist/img/brazilbg1.jpg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo8 {
+	background-image: url("/dist/img/brazilbg1.jpg");
+}
+
+section#portfolio.layout.layout-portfolio .inner .img-overlay {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(22, 59, 91, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+section#portfolio.layout.layout-portfolio .inner .img-overlay .text-container {
+	position: absolute;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	justify-content: space-around;
+	top: 50%;
+	left: 0;
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	width: 100%;
+	height: 175px;
+	padding: 0 20px;
+	background-color: rgba(22, 59, 91, 0.5);
+}
+
+@media (min-width: 1200px) {
+	section#portfolio.layout.layout-portfolio .inner .img-overlay .text-container {
+		height: unset;
+	}
+}
+
+section#portfolio.layout.layout-portfolio .inner .img-overlay .text-container .project-name {
+	color: #23A2BF;
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 1.5em;
+}
+
+section#portfolio.layout.layout-portfolio .inner .img-overlay .text-container .project-label {
+	color: #beb347;
+	font-family: "Open Sans", sans-serif;
+	font-size: .8em;
+	font-weight: bold;
+}
+
+section#portfolio.layout.layout-portfolio .inner .img-overlay .text-container .project-subtitle {
+	display: block;
+	color: #beb347;
+	font-family: "Open Sans", sans-serif;
+}
+
+@media (min-width: 1200px) {
+	section#portfolio.layout.layout-portfolio .inner .img-overlay .text-container .project-subtitle {
+		display: none;
+		margin-top: 10px;
+	}
+}
+
+section#portfolio.layout.layout-portfolio .inner .img-overlay .text-container .project-subtitle ul.skills {
+	width: 100%;
+	height: 175px;
+	padding: 2%;
+	display: -webkit-box;
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	justify-content: space-around;
+	list-style-type: square;
+	background-color: #173C5C;
+}
+
+section#portfolio.layout.layout-portfolio .inner .img-overlay .text-container .project-subtitle ul.skills h4 {
+	color: #23A2BF;
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 1.2em;
+}
+
+section#portfolio.layout.layout-portfolio .inner .img-overlay .text-container .project-subtitle ul.skills li {
+	font-size: .9em;
+}
+
+@media (min-width: 1200px) {
+	section#portfolio.layout.layout-portfolio .inner .img-overlay:hover .project-subtitle {
+		display: block;
+		-webkit-animation: slideDown .3s ease-in-out forwards;
+		        animation: slideDown .3s ease-in-out forwards;
+		-webkit-transition: all;
+		transition: all;
+	}
+}
+
+section#banner {
+	width: 100%;
+	height: 50vh;
+	background-color: #173C5C;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	        align-items: center;
+}
+
+section#banner .title {
+	width: 100%;
+	height: 25%;
+	padding: 2%;
+	text-align: center;
+	font-family: "Nunito Sans", sans-serif;
+	color: #23A2BF;
+	font-size: 2em;
+}
+
+section#banner .ribbon {
+	width: 100%;
+	height: 50%;
+	background-color: #23A2BF;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	justify-content: space-around;
+	-webkit-box-align: center;
+	        align-items: center;
+}
+
+@media (min-width: 992px) {
+	section#banner .ribbon {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		        flex-direction: row;
+	}
+}
+
+section#banner .ribbon .icon {
+	width: 100px;
+	background-color: #beb347;
+}
+
+/* 
+
+homework:
+kill animations in mobile, trigger animnations at 1040px and above (make variable for it)
+canyonroadfilms.com/directors
+// free use images, set as css background 
+//image overlay
+//title with animation
+*/
+@-webkit-keyframes slideDown {
+	50% {
+		-webkit-transform: scale(2);
+		        transform: scale(2);
+	}
+	90% {
+		-webkit-transform: translateY(70%);
+		        transform: translateY(70%);
+		-webkit-transform: rotate(20deg);
+		        transform: rotate(20deg);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+	}
+}
+@keyframes slideDown {
+	50% {
+		-webkit-transform: scale(2);
+		        transform: scale(2);
+	}
+	90% {
+		-webkit-transform: translateY(70%);
+		        transform: translateY(70%);
+		-webkit-transform: rotate(20deg);
+		        transform: rotate(20deg);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+	}
 }
 
 /*# sourceMappingURL=main.css.map */

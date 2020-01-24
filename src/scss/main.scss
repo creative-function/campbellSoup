@@ -15,140 +15,362 @@ TABLE OF CONTENTS:
 
 /* 0. Reset ================================= */
 @import 'reset';
+@import 'base/media';
+@import 'base/colors';
+@import 'base/fonts';
 
 
 
-$campJose:'Josefin Sans', sans-serif;
 
-$campFred:'Fredericka the Great', cursive;
-
-$campVast:'Vast Shadow', cursive;
-
-
-
-$campWhite: #ffffff;
-$campRed: #d25941;
-$campGold: #fcc653;
-$campPurp: #5f0F40;
-$campTang: #f90c38;
 /* 1. Main Layout ================================= */
 
 * {
 	box-sizing: border-box;
 }
 
-body,html {
-	background-color: #ccc;
-	height: 100%;
+body {
+	background: $gridBlack;
 }
-
-
 
 /* 2. Content ================================= */
 
-.floating-box {
-	position: absolute;
-	top:10%;
-	left: 20%;
-	font-family: sans-serif;
-	width: 45%;
-	height: 50%;
-	max-width: 500px;
-	margin: 140px auto;
-	padding: 30px 20px 30px 30px;
-	.foreground {
-		position: relative;
-		left: 10%;
-		top:20%;
-		z-index: 2;
-		transform: translateZ(100px);
-	}
-	.background {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		background:$campGold;
-		border-radius: 50%;
-		border: 2px solid $campPurp;
-		z-index: 1;
-		// perspective: 2000px;
-		transition: 0.2s;
-		transform: translateX(20px) perspective(600px) rotateY(15deg);
-	}
-	
-	.logo {
-		position: absolute;
-		top: -30px;
-		width: 60px;
-		z-index: 2;
-		transform: translateZ(100px);
-		transition: 0.3s;
+section#nav-section{
+	width: 100%;
+	border-bottom: 3px white solid;
+	.nav-menu{
 
-		&:hover {
-			transform: rotate(-0.4turn)
+		display: flex;
+		flex-direction: column;
+
+		@media#{$tablet}{
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		.nav-logo{
+			width:20%;
+			margin:0 auto;
+			img{
+				width: 100%;
+			}
+
+			@media#{$tablet}{
+				margin: 0 0;
+				img{
+					width: 50%;
+				}
+			}
+
+			@media#{$desktop}{
+				img{
+					width: 35%;
+				}
+			}
+			
+		}
+
+		nav{
+			padding:20px;
+			ul{
+				color:white;
+				text-decoration: none;
+				display: flex;
+				font-family: $fontOpen;
+				justify-content: center;
+				
+				a{
+					padding:5px;
+					margin:10px;
+					text-decoration: none;
+				}
+				a:visited{
+					text-decoration: none;
+					color:$gridWhite;
+				}
+			}
 		}
 	}
-	h1 {
-		font-family: $campVast;
-		font-size: 22pt;
-		margin: 15px 0;
-
-	}
-	p {
-		color: $campRed;
-		font-family: $campJose;
-		// margin: 10px 0;
-		line-height: 140%;
-		text-align: center;
-
-		
-	}
 }
 
-.menu{
-	position: absolute;
-	right:0;
-	width:250px;
-	height:auto;
-	background-color: $campWhite;
-	border: 3px solid $campPurp;
-	font-size: 1.5rem;
-	font-family: $campFred;
-	// transform: rotate(-45deg);
 
-
-	a{
-		text-decoration: none;
-		color: $campTang;
-	}
-	.ul{
-		list-style: none;
-
-	}
-
-	.nav{
-		margin: 20px;
-	}
-
-	.nav-print{
-		font-size: .65rem;
-		margin:5%;
-		font-family: $campJose;
-		
-	}
-
+section#titleCap{
 	
+	.page-title{
+
+		margin: 0 auto;
+		width: 80%;
+		text-align: center;
+		
+		h1{
+			font-family:$fontNun;
+			font-size: 3em;
+			color: $gridWhite;
+			margin: 5%;
+		}
+
+		.snippet{
+			font-family:$fontOpen;
+			font-size: 1.15em;
+			line-height: 1.5em;
+			color: $gridWhite;
+			padding: 10px;
+
+			@media#{$tablet}{
+				width:50%;
+				margin: 0 auto;
+			}
+
+		}
+	}
 }
 
-.top-can{
-	width:100%;
-	height: 60%;
-	background-color: $campTang;
+
+section#portfolio.layout.layout-portfolio{
+    padding: 20px 0;
+   
+    .container{
+        width:95%;
+        margin:0 auto;
+        max-width:1440px;
+		position:relative;
+		
+    }
+
+    .portfolio-grid{
+        padding: 25px 0;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+		justify-content: space-between;
+		
+		// &::after{
+		// 	content:"";
+		// 	flex:auto; 
+		// }
+
+        .single-project{
+            width:100%;
+			text-align: center;
+			margin:15px 0;
+			position: relative;
+			padding:0 15px;
+			height:275px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			transition: all 0.2s ease-out;
+			
+			&.sp-photo2{
+				background-size: 15%;
+				background-repeat: repeat-x;
+				background-position-y: 85%;		
+			}
+
+			&.sp-photo8,&.sp-photo5{
+				background-size: contain;
+			}
+
+			&.sp-photo7{
+				background-position-y: 5%;
+			}
+			 
+			@media#{$mobile}{
+				width:49%;
+				height:250px;
+			}
+		
+			@media#{$tablet}{ 
+				width:29%;
+				height:200px;
+			}
+		
+		   @media#{$desktop}{
+				width:24%;
+				height:200px;
+			}
+
+        }
+	}
+	
+	.sp-photo1{
+		background-image: url("/dist/img/tsr+cover@2x.jpg");
+	}
+	
+	.sp-photo2{
+		background-image: url("/dist/img/history-img.png");
+	}
+
+	.sp-photo3{
+		background-image: url("/dist/img/adidas-img.png");
+	}
+
+	.sp-photo4{
+		background-image: url("/dist/img/redFight.png");
+	}
+
+	.sp-photo5{
+		background-image: url("/dist/img/beanLight.svg");
+	}
+
+	.sp-photo6{
+		background-image: url("/dist/img/clc-img.jpeg");
+	}
+
+	.sp-photo7{
+		background-image: url("/dist/img/brazilbg1.jpg");
+		
+	}
+	
+	.sp-photo8{
+		background-image: url("/dist/img/brazilbg1.jpg");
+		
+	}	
+
+	.inner{
+
+		.img-overlay{
+			
+			width:100%;
+			height: 100%;
+			background-color:$gridHeadingTint;
+			position: absolute;
+			top:0;
+			left:0;
+			
+			
+			.text-container{
+				position:absolute;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				top:50%;
+				left:0;
+				transform:translateY(-50%);
+				width:100%;
+				height: 175px;
+				padding:0 20px;
+				background-color: $gridHeadingTint;
+				@media#{$desktop}{
+					height: unset;
+				}
+
+				.project-name{
+					color:$gridLink;
+					font-family: $fontNun;
+					font-size: 1.5em;
+				}
+
+				.project-label{
+					color: $gridGold;
+					font-family: $fontOpen;
+					font-size: .8em;
+					font-weight: bold;
+					//padding: 2%;
+				}
+				
+				.project-subtitle{
+					display: block;
+					color: $gridGold;
+					font-family: $fontOpen;
+					@media#{$desktop}{
+						display: none;
+						margin-top:10px;
+					}
+
+					ul.skills{
+						width: 100%;
+						height: 175px;
+						padding: 2%;
+						display: flex;
+						flex-wrap: wrap;
+						flex-direction: column;
+						justify-content: space-around;
+						list-style-type: square;
+						background-color: $gridHeading;
+
+						h4{
+							color:$gridLink;
+							font-family: $fontNun;
+							font-size: 1.2em;
+						}
+
+						li{
+							font-size: .9em;
+						}
+
+					}
+				}
+
+			}
+
+			&:hover{
+
+				@media#{$desktop}{
+
+					.project-subtitle{
+						display: block;
+						animation: slideDown .3s ease-in-out forwards;
+						transition: all;
+					}
+				}
+			}
+		}
+
+	}
 }
 
-.bottom-can{
+section#banner{
 	width:100%;
-	height: 40%;
-	background-color: $campWhite;
+	height: 50vh;
+	background-color: $gridHeading;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	.title{
+		width: 100%;
+		height: 25%;
+		padding:2%;
+		text-align: center;
+		font-family: $fontNun;
+		color:$gridLink;
+		font-size: 2em;
+	}
+
+	.ribbon{
+		width: 100%;
+		height: 50%;
+		background-color: $gridLink;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+
+		@media#{$tablet}{
+			flex-direction:row;
+		}
+		.icon{
+			width:100px;
+			background-color:$gridGold;
+		}
+	}
 }
+
+/* 
+
+homework:
+kill animations in mobile, trigger animnations at 1040px and above (make variable for it)
+canyonroadfilms.com/directors
+// free use images, set as css background 
+//image overlay
+//title with animation
+*/
+
+@keyframes slideDown{
+	50%{transform: scale(2);}
+	90% {transform: translateY(70%);transform: rotate(20deg);}
+	100%{transform: scale(1);}
+}
+
+
+ 
