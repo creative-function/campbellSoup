@@ -98,8 +98,7 @@ section#nav-section{
 }
 
 
-section#titleCap{
-	
+section#titleCap{	
 	background-image: url("/dist/img/baby-dots.webp");
 	.page-title{
 
@@ -272,12 +271,12 @@ section#portfolio.layout.layout-portfolio{
 		background-image: url("/dist/img/stamp1.png");
 		
 	}	
-	.sp-photo16{
-		background-image: url("/dist/img/social1.png");
-		
-	}	
 	.sp-photo15{
 		background-image: url("/dist/img/chelsea.jpg");
+		
+	}	
+	.sp-photo16{
+		background-image: url("/dist/img/social1.png");
 		
 	}	
 
@@ -377,8 +376,8 @@ section#portfolio.layout.layout-portfolio{
 section#banner{
 	width:100%;
 	height: 50vh;
-	background-image: url("/dist/img/baby-dots.webp");
-	//background-color: $gridBody;
+	// background-image: url("/dist/img/baby-dots.webp");
+	background-color: $gridHeading;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -389,7 +388,7 @@ section#banner{
 		padding:2%;
 		text-align: center;
 		font-family: $fontNun;
-		color:$gridHeading;
+		color:$gridLink;
 		font-size: 2em;
 	}
 
@@ -397,6 +396,7 @@ section#banner{
 		width: 100%;
 		height: 50%;
 		background-color: $gridBodyTint;
+		background-image: url("/dist/img/baby-dots.webp");
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -440,5 +440,156 @@ canyonroadfilms.com/directors
 	100%{transform: scale(1);}
 }
 
+
+
+///PAGE 2 ABOUT
+
+section#about-layout{
+	//background-color: $gridBlack;
+	width: 90%;
+	margin: 0 auto;
+	height: 50vh;
+	background-image: url("/dist/img/baby-dots.webp");
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	position: relative;
+	justify-content: center;
+	@media#{$tablet}{
+		width: 100%;
+		flex-direction: row;
+	}
+
+	section#about-me{
+		display: flex;
+		width: 100%;
+		border:2px dashed $gridGold;
+		@media#{$tablet}{
+			width: 90%;
+		}
+	}
+
+	section#about-work{
+		width: 100%;
+		border:2px dashed $gridLink;
+		display: flex;
+		@media#{$tablet}{
+			width: 90%;
+			justify-content: flex-end;
+		}
+
+		ul.about-contact{
+			font-family: $fontNun;
+			//background-color: lightseagreen;
+			width: 90%;
+			height: 90%;
+			margin: 2% auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			li{
+				font-size:1.2em;
+			}
+			h3{
+				font-family: $fontUnica;			font-size: 2em;
+			}
+		}
+		
+	}
+	
+	section.about-img-mobile{
+		display: block;
+		width:100%;
+		background-color: lightpink;
+		
+		@media#{$tablet}{
+			display: none;
+		}
+
+		ul.about-contact{
+			font-family: $fontNun;
+			width: 65%;
+			height: 90%;
+			margin: 2% auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			li{
+				font-size:1.2em;
+				line-height: 1.4em;
+			}
+			h3{
+				font-family: $fontUnica;			font-size: 2em;
+			}
+		}
+
+		img{
+			width: 30%;
+			float: right;
+		}
+		
+	}
+
+	.about-img-tab{
+		display:none;
+		width:40%;
+		background-color: lightpink;
+		@media#{$tablet}{
+			display: block;
+		}
+	}
+
+	.tab1{
+		background-image: url("/dist/img/chelsea.jpg");
+		background-size: cover;
+		background-position: center;
+	}
+	
+	
+	.about-text{
+		background-color:$gridLink;
+		width:100%;
+		height: 100%;
+		padding:2%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		color:$gridBlack;
+		font-family: $fontOpen;
+
+		@media#{$tablet}{
+			width: 60%;
+		}
+		h3{
+			font-family: $fontUnica;
+			font-size: 2em;
+		}
+		p{
+			width: 90%;
+			text-align: center;
+			line-height: 1.5em;
+			margin: 1% auto;
+			padding:1%;
+			//background-color: lightpink;
+		}
+		ul.about-me-list{
+			//background-color: lightpink;
+			width: 90%;
+			height: 100%;
+			margin: 2% auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			li{
+				line-height: 2em;
+			}
+		}
+	}
+	
+	.at2{
+		background-color: $gridGold;
+	}
+}
 
  

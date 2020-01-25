@@ -341,12 +341,12 @@ section#portfolio.layout.layout-portfolio .sp-photo14 {
 	background-image: url("/dist/img/stamp1.png");
 }
 
-section#portfolio.layout.layout-portfolio .sp-photo16 {
-	background-image: url("/dist/img/social1.png");
-}
-
 section#portfolio.layout.layout-portfolio .sp-photo15 {
 	background-image: url("/dist/img/chelsea.jpg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo16 {
+	background-image: url("/dist/img/social1.png");
 }
 
 section#portfolio.layout.layout-portfolio .inner .img-overlay {
@@ -446,7 +446,7 @@ section#portfolio.layout.layout-portfolio .inner .img-overlay .text-container .p
 section#banner {
 	width: 100%;
 	height: 50vh;
-	background-image: url("/dist/img/baby-dots.webp");
+	background-color: #173C5C;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
@@ -462,7 +462,7 @@ section#banner .title {
 	padding: 2%;
 	text-align: center;
 	font-family: "Nunito Sans", sans-serif;
-	color: #173C5C;
+	color: #23A2BF;
 	font-size: 2em;
 }
 
@@ -470,6 +470,7 @@ section#banner .ribbon {
 	width: 100%;
 	height: 50%;
 	background-color: rgba(68, 82, 96, 0.4);
+	background-image: url("/dist/img/baby-dots.webp");
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: horizontal;
@@ -549,6 +550,197 @@ canyonroadfilms.com/directors
 		-webkit-transform: scale(1);
 		        transform: scale(1);
 	}
+}
+
+section#about-layout {
+	width: 90%;
+	margin: 0 auto;
+	height: 50vh;
+	background-image: url("/dist/img/baby-dots.webp");
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
+	flex-wrap: wrap;
+	position: relative;
+	-webkit-box-pack: center;
+	        justify-content: center;
+}
+
+@media (min-width: 992px) {
+	section#about-layout {
+		width: 100%;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		        flex-direction: row;
+	}
+}
+
+section#about-layout section#about-me {
+	display: -webkit-box;
+	display: flex;
+	width: 100%;
+	border: 2px dashed #beb347;
+}
+
+@media (min-width: 992px) {
+	section#about-layout section#about-me {
+		width: 90%;
+	}
+}
+
+section#about-layout section#about-work {
+	width: 100%;
+	border: 2px dashed #23A2BF;
+	display: -webkit-box;
+	display: flex;
+}
+
+@media (min-width: 992px) {
+	section#about-layout section#about-work {
+		width: 90%;
+		-webkit-box-pack: end;
+		        justify-content: flex-end;
+	}
+}
+
+section#about-layout section#about-work ul.about-contact {
+	font-family: "Nunito Sans", sans-serif;
+	width: 90%;
+	height: 90%;
+	margin: 2% auto;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	justify-content: space-around;
+}
+
+section#about-layout section#about-work ul.about-contact li {
+	font-size: 1.2em;
+}
+
+section#about-layout section#about-work ul.about-contact h3 {
+	font-family: "Unica One", cursive;
+	font-size: 2em;
+}
+
+section#about-layout section.about-img-mobile {
+	display: block;
+	width: 100%;
+	background-color: lightpink;
+}
+
+@media (min-width: 992px) {
+	section#about-layout section.about-img-mobile {
+		display: none;
+	}
+}
+
+section#about-layout section.about-img-mobile ul.about-contact {
+	font-family: "Nunito Sans", sans-serif;
+	width: 65%;
+	height: 90%;
+	margin: 2% auto;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	justify-content: space-around;
+}
+
+section#about-layout section.about-img-mobile ul.about-contact li {
+	font-size: 1.2em;
+	line-height: 1.4em;
+}
+
+section#about-layout section.about-img-mobile ul.about-contact h3 {
+	font-family: "Unica One", cursive;
+	font-size: 2em;
+}
+
+section#about-layout section.about-img-mobile img {
+	width: 30%;
+	float: right;
+}
+
+section#about-layout .about-img-tab {
+	display: none;
+	width: 40%;
+	background-color: lightpink;
+}
+
+@media (min-width: 992px) {
+	section#about-layout .about-img-tab {
+		display: block;
+	}
+}
+
+section#about-layout .tab1 {
+	background-image: url("/dist/img/chelsea.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+section#about-layout .about-text {
+	background-color: #23A2BF;
+	width: 100%;
+	height: 100%;
+	padding: 2%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	-webkit-box-pack: space-evenly;
+	        justify-content: space-evenly;
+	-webkit-box-align: center;
+	        align-items: center;
+	color: #09141e;
+	font-family: "Open Sans", sans-serif;
+}
+
+@media (min-width: 992px) {
+	section#about-layout .about-text {
+		width: 60%;
+	}
+}
+
+section#about-layout .about-text h3 {
+	font-family: "Unica One", cursive;
+	font-size: 2em;
+}
+
+section#about-layout .about-text p {
+	width: 90%;
+	text-align: center;
+	line-height: 1.5em;
+	margin: 1% auto;
+	padding: 1%;
+}
+
+section#about-layout .about-text ul.about-me-list {
+	width: 90%;
+	height: 100%;
+	margin: 2% auto;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	-webkit-box-pack: justify;
+	        justify-content: space-between;
+}
+
+section#about-layout .about-text ul.about-me-list li {
+	line-height: 2em;
+}
+
+section#about-layout .at2 {
+	background-color: #beb347;
 }
 
 /*# sourceMappingURL=main.css.map */
