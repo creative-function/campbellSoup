@@ -154,6 +154,7 @@ section#nav-section .nav-menu nav ul a:visited {
 
 section#titleCap {
 	background-image: url("/dist/img/baby-dots.webp");
+	padding: 1%;
 }
 
 section#titleCap .page-title {
@@ -256,8 +257,12 @@ section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-pho
 	background-position-y: 85%;
 }
 
-section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo5, section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo8, section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo11, section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo12, section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo13, section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo16 {
+section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo8, section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo11, section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo12, section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo13, section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo16, section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo19, section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo21, section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo23, section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo24 {
 	background-size: contain;
+}
+
+section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo6 {
+	background-size: 60%;
 }
 
 section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo7 {
@@ -302,11 +307,11 @@ section#portfolio.layout.layout-portfolio .sp-photo4 {
 }
 
 section#portfolio.layout.layout-portfolio .sp-photo5 {
-	background-image: url("/dist/img/beanLight.svg");
+	background-image: url("/dist/img/BG.welcome.png");
 }
 
 section#portfolio.layout.layout-portfolio .sp-photo6 {
-	background-image: url("/dist/img/clc-img.jpeg");
+	background-image: url("/dist/img/airBnBlogo.png");
 }
 
 section#portfolio.layout.layout-portfolio .sp-photo7 {
@@ -349,6 +354,38 @@ section#portfolio.layout.layout-portfolio .sp-photo16 {
 	background-image: url("/dist/img/social1.png");
 }
 
+section#portfolio.layout.layout-portfolio .sp-photo17 {
+	background-image: url("/dist/img/toDOimg.png");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo18 {
+	background-image: url("/dist/img/travel-720.jpg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo19 {
+	background-image: url("/dist/img/imgAIW.png");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo20 {
+	background-image: url("/dist/img/BG1.daisies.jpg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo21 {
+	background-image: url("/dist/img/beanLight.svg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo22 {
+	background-image: url("/dist/img/clc-img.jpeg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo23 {
+	background-image: url("/dist/img/semiColon.png");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo24 {
+	background-image: url("/dist/img/EELogo.png");
+}
+
 section#portfolio.layout.layout-portfolio .inner .img-overlay {
 	width: 100%;
 	height: 100%;
@@ -389,7 +426,7 @@ section#portfolio.layout.layout-portfolio .inner .img-overlay .text-container .p
 }
 
 section#portfolio.layout.layout-portfolio .inner .img-overlay .text-container .project-label {
-	color: #beb347;
+	color: #f4d197;
 	font-family: "Open Sans", sans-serif;
 	font-size: .8em;
 	font-weight: bold;
@@ -397,7 +434,7 @@ section#portfolio.layout.layout-portfolio .inner .img-overlay .text-container .p
 
 section#portfolio.layout.layout-portfolio .inner .img-overlay .text-container .project-subtitle {
 	display: block;
-	color: #beb347;
+	color: #f4d197;
 	font-family: "Open Sans", sans-serif;
 }
 
@@ -553,10 +590,9 @@ canyonroadfilms.com/directors
 }
 
 section#about-layout {
-	width: 90%;
+	max-width: 80%;
 	margin: 0 auto;
 	height: 50vh;
-	background-image: url("/dist/img/baby-dots.webp");
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: horizontal;
@@ -581,7 +617,8 @@ section#about-layout section#about-me {
 	display: -webkit-box;
 	display: flex;
 	width: 100%;
-	border: 2px dashed #beb347;
+	height: 100%;
+	border: 2px dashed #f4d197;
 }
 
 @media (min-width: 992px) {
@@ -630,7 +667,7 @@ section#about-layout section#about-work ul.about-contact h3 {
 section#about-layout section.about-img-mobile {
 	display: block;
 	width: 100%;
-	background-color: lightpink;
+	background-color: #bae7ff;
 }
 
 @media (min-width: 992px) {
@@ -670,7 +707,7 @@ section#about-layout section.about-img-mobile img {
 section#about-layout .about-img-tab {
 	display: none;
 	width: 40%;
-	background-color: lightpink;
+	background-color: #bae7ff;
 }
 
 @media (min-width: 992px) {
@@ -701,6 +738,7 @@ section#about-layout .about-text {
 	        align-items: center;
 	color: #09141e;
 	font-family: "Open Sans", sans-serif;
+	font-weight: bold;
 }
 
 @media (min-width: 992px) {
@@ -740,7 +778,7 @@ section#about-layout .about-text ul.about-me-list li {
 }
 
 section#about-layout .at2 {
-	background-color: #beb347;
+	background-color: #f4d197;
 }
 
 /*# sourceMappingURL=main.css.map */
