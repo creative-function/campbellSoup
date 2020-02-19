@@ -15,6 +15,11 @@ TABLE OF CONTENTS:
 
 /* 0. Reset ================================= */
 @import 'reset';
+@import 'base/media';
+@import 'base/colors';
+@import 'base/fonts';
+
+
 
 $campJose:'Josefin Sans', sans-serif;
 $campFred:'Fredericka the Great', cursive;
@@ -40,147 +45,600 @@ html,body{
 }
 
 body {
-	background: $campGold;
-	max-width: 1200px;
-	margin:0 auto;
-	overflow: hidden;
-	// background-image: url(/dist/img/tacoSet2.png);
-	// background-repeat: repeat;
-	// background-size:contain; 
-
-	@media #{$tablet}{
-		background-color: $campRed;
-	}
-
+	background: $gridWhite;
 }
-
-
-
 
 /* 2. Content ================================= */
 
-.overflow-wrapper{
+section#nav-section{
 	width: 100%;
-	height: auto;
-	overflow: hidden;
-	
+	border-bottom: 3px white solid;
+	.nav-menu{
 
-	.about-me{
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
-		width: 100%;
-	
-	
-		@media #{$tablet}{
+
+		@media#{$tablet}{
 			flex-direction: row;
-			flex-direction: row-reverse;
+			justify-content: space-between;
 		}
-	
-	
-		.bkgrnd-angle{
-			// width:100%;
-			// height: 100%;
-			// position: absolute;
-			// background-color: aqua;
-			// z-index: -100;
-			// overflow: hidden;
-	
-			position: absolute;
-			top: -45%;
-			z-index: -100;
-			width: 170%;
-			height: 170%;
-			transform-origin: top left;
-			background-color: $campTang;
-			border-color: transparent transparent #000000 transparent;
-			transform: rotate(45deg);
-			
-			@media #{$tablet}{
-				background-color: $campGold;
-			}
-			
-			
-		}
-	
-		.column{
-			width:100%;
-	
-			@media #{$tablet}{
-				width:50%;
-			}
-			
-		}
-	
-		.slideshow{
+
+		.nav-logo{
+			max-width:30%;
+			margin:0 auto;
+			//  background-color: lightcoral;
 			display: flex;
-			
-	
-			.slide{
-				display: none;
-				
-				.picture{
-					position: relative;
-					width: 40%;
-					left:30%;
-	
-					@media #{$tablet}{
-						width: 80%;
-						left:20%;
-					}
+			align-items: center;
+			img{
+				width: 100%;
+			}
+
+			@media#{$tablet}{
+				margin: 0 .5%;
+				width: 9%;
+				// background-color: lightgreen;
+				img{
+					width: 100%;
 				}
 			}
 			
 		}
-	
-		.bio{
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			padding:5%;
-			font-family: $campJose;
-			font-size:1rem;
-			line-height: 1.4rem;
-			// @media #{$tablet}{
-			// 	background-color: $campGold;
-			// 	opacity: .8;
-			// }
-			
-			
-			
-			h1{
-				font-family: $campJose;
-				font-size: 2.25em;
-				margin:2%;
+
+		nav{
+			padding:20px;
+			ul{
+				color:$gridHeading;
+				text-decoration: none;
+				display: flex;
+				font-family: $fontOpen;
+				justify-content: center;
 				
-			}
-			h2{
-				font-family: $campJose;
-				font-size: 2rem;
-				margin:4%;
-			}
-			
-			p{
-				width:100%;
-				margin:4%;
-				padding:2%;
-				
-			}
-	
-			button{
-				width:50%;
-				height: 50px;
-				margin:4%;
-				background-color: $campRed;
-				font-size: 1rem;
-				font-family: $campJose;
+				a{
+					padding:5px;
+					margin:10px;
+					text-decoration: none;
+
+					li:hover{
+						color:$gridOrange;
+					}
+				}
+
+				a:visited{
+					text-decoration: none;
+					color:$gridLink;
+				}
 			}
 		}
 	}
+}
 
-	footer{
-		width:100%;
-		height: 150px;
-		background-color: $campPurp;
+
+section#titleCap{	
+	background-image: url("/dist/img/baby-dots.webp");
+	padding: 1%;
+	.page-title{
+		margin: 0 auto;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		.cc-name-imgs{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			align-items: center;
+			width:100%;
+			margin:0 auto;
+
+			img.cc-logo-dtop{
+				display: none;
+				@media#{$desktop}{
+					display: block;
+				}
+			}
+		}
+
+		.job-title{
+			font-family:$fontUnica;
+			font-size: 2em;
+			color: $gridLink;
+			padding: 10px;
+			display: flex;
+			justify-content: center;
+			h2{
+				text-align: center;
+				@media#{$tablet}{
+					margin-right:35px;
+
+				} 
+			}
+
+		}
 	}
 }
+
+
+section#portfolio.layout.layout-portfolio{
+    padding: 20px 0;
+    background-color: $gridBlack;
+    .container{
+        width:95%;
+        margin:0 auto;
+        max-width:1440px;
+		position:relative;
+		
+    }
+
+    .portfolio-grid{
+        padding: 25px 0;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+		justify-content: space-between;
+		
+		// &::after{
+		// 	content:"";
+		// 	flex:auto; 
+		// }
+
+        .single-project{
+            width:100%;
+			text-align: center;
+			margin:15px 0;
+			position: relative;
+			padding:0 15px;
+			height:275px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			transition: all 0.2s ease-out;
+			
+			&.sp-photo2,&.sp-photo10{
+				background-size: 15%;
+				background-repeat: repeat-x;
+				background-position-y: 85%;		
+			}
+
+			&.sp-photo8,&.sp-photo11,&.sp-photo12,&.sp-photo13,&.sp-photo16,&.sp-photo19,&.sp-photo21,&.sp-photo23,&.sp-photo24{
+				background-size: contain;
+			}
+
+			&.sp-photo6{
+				background-size: 60%;
+			}
+
+			&.sp-photo7{
+				background-position-y: 5%;
+			}
+			 
+			@media#{$mobile}{
+				width:49%;
+				height:250px;
+			}
+		
+			@media#{$tablet}{ 
+				width:29%;
+				height:200px;
+			}
+		
+		   @media#{$desktop}{
+				width:24%;
+				height:200px;
+			}
+
+        }
+	}
+	
+	.sp-photo1{
+		background-image: url("/dist/img/tsr+cover@2x.jpg");
+	}
+	
+	.sp-photo2{
+		background-image: url("/dist/img/history-img.png");
+	}
+
+	.sp-photo3{
+		background-image: url("/dist/img/adidas-img.png");
+	}
+
+	.sp-photo4{
+		background-image: url("/dist/img/redFight.png");
+	}
+
+	.sp-photo5{
+		background-image: url("/dist/img/BG.welcome.png");
+				
+	}
+
+	.sp-photo6{
+		background-image: url("/dist/img/airBnBlogo.png");	
+	}
+
+	.sp-photo7{
+		background-image: url("/dist/img/brazilbg1.jpg");
+		
+	}
+	
+	.sp-photo8{
+		background-image: url("/dist/img/brazilbg1.jpg");
+		
+	}	
+
+	.sp-photo9{
+		background-image: url("/dist/img/mailchimp.png");
+		
+	}	
+
+	.sp-photo10{
+		background-image: url("/dist/img/news1.png");
+		
+	}
+
+	.sp-photo11{
+		background-image: url("/dist/img/news4.webp");
+		
+	}	
+	.sp-photo12{
+		background-image: url("/dist/img/news3.webp");
+		
+	}	
+	.sp-photo13{
+		background-image: url("/dist/img/chat1.png");
+		
+	}
+	.sp-photo14{
+		background-image: url("/dist/img/stamp1.png");
+		
+	}	
+	.sp-photo15{
+		background-image: url("/dist/img/chelsea.jpg");
+		
+	}	
+	.sp-photo16{
+		background-image: url("/dist/img/social1.png");
+		
+	}	
+	.sp-photo17{
+		background-image: url("/dist/img/toDOimg.png");
+		
+	}	
+	.sp-photo18{
+		background-image: url("/dist/img/travel-720.jpg");
+		
+	}	
+	.sp-photo19{
+		background-image: url("/dist/img/imgAIW.png");
+		
+	}	
+	.sp-photo20{
+		background-image: url("/dist/img/BG1.daisies.jpg");
+		
+	}	
+	.sp-photo21{
+		background-image: url("/dist/img/beanLight.svg");
+	}
+
+	.sp-photo22{
+		background-image: url("/dist/img/clc-img.jpeg");
+	}
+	.sp-photo23{
+		background-image: url("/dist/img/semiColon.png");
+		
+	}	
+	.sp-photo24{
+		background-image: url("/dist/img/EELogo.png");
+		
+	}	
+	.inner{
+
+		.img-overlay{
+			
+			width:100%;
+			height: 100%;
+			background-color:$gridHeadingTint;
+			position: absolute;
+			top:0;
+			left:0;
+			
+			
+			.text-container{
+				position:absolute;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				top:50%;
+				left:0;
+				transform:translateY(-50%);
+				width:100%;
+				height: 175px;
+				padding:0 20px;
+				background-color: $gridHeadingTint;
+				@media#{$desktop}{
+					height: unset;
+				}
+
+				.project-name{
+					color:$gridLink;
+					font-family: $fontNun;
+					font-size: 1.5em;
+				}
+
+				.project-label{
+					color: $gridGold;
+					font-family: $fontOpen;
+					font-size: .8em;
+					font-weight: bold;
+					//padding: 2%;
+				}
+				
+				.project-subtitle{
+					display: block;
+					color: $gridGold;
+					font-family: $fontOpen;
+					@media#{$desktop}{
+						display: none;
+						margin-top:10px;
+					}
+
+					ul.skills{
+						width: 100%;
+						height: 175px;
+						padding: 2%;
+						display: flex;
+						flex-wrap: wrap;
+						flex-direction: column;
+						justify-content: space-around;
+						list-style-type: square;
+						background-color: $gridHeading;
+
+						h4{
+							color:$gridLink;
+							font-family: $fontNun;
+							font-size: 1.2em;
+						}
+
+						li{
+							font-size: .9em;
+						}
+
+					}
+				}
+
+			}
+
+			&:hover{
+
+				@media#{$desktop}{
+
+					.project-subtitle{
+						display: block;
+						animation: slideDown .3s ease-in-out forwards;
+						transition: all;
+					}
+				}
+			}
+		}
+
+	}
+}
+
+section#banner{
+	width:100%;
+	height: 50vh;
+	// background-image: url("/dist/img/baby-dots.webp");
+	background-color: $gridHeading;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	.title{
+		width: 100%;
+		height: 25%;
+		padding:2%;
+		text-align: center;
+		font-family: $fontNun;
+		color:$gridLink;
+		font-size: 2em;
+	}
+
+	.ribbon{
+		width: 100%;
+		height: 50%;
+		background-color: $gridBodyTint;
+		background-image: url("/dist/img/baby-dots.webp");
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+
+		.icon{
+			width:100px;
+			display: flex;
+			justify-content: center;
+
+			img.abc{
+				width: 45%;
+				@media#{$tablet}{
+					width:80%;
+				}
+			}
+			img.def{
+				width: 55%;
+				@media#{$tablet}{
+					width:100%;
+				}
+			}
+		}
+	}
+}
+
+/* 
+
+homework:
+kill animations in mobile, trigger animnations at 1040px and above (make variable for it)
+canyonroadfilms.com/directors
+// free use images, set as css background 
+//image overlay
+//title with animation
+*/
+
+@keyframes slideDown{
+	50%{transform: scale(2);}
+	90% {transform: translateY(70%);transform: rotate(20deg);}
+	100%{transform: scale(1);}
+}
+
+
+
+///PAGE 2 ABOUT
+
+
+section#about-layout{
+	//background-color: $gridBlack;
+	max-width: 80%;
+	margin: 0 auto;
+	height: 50vh;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	position: relative;
+	justify-content: center;
+	@media#{$tablet}{
+		width: 100%;
+		flex-direction: row;
+	}
+
+	section#about-me{
+		display: flex;
+		width: 100%;
+		height: 100%;
+		border:2px dashed $gridGold;
+		@media#{$tablet}{
+			width: 90%;
+		}
+	}
+
+	section#about-work{
+		width: 100%;
+		border:2px dashed $gridLink;
+		display: flex;
+		@media#{$tablet}{
+			width: 90%;
+			justify-content: flex-end;
+		}
+
+		ul.about-contact{
+			font-family: $fontNun;
+			width: 90%;
+			height: 90%;
+			margin: 2% auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			li{
+				font-size:1.2em;
+			}
+			h3{
+				font-family: $fontUnica;			font-size: 2em;
+			}
+		}
+		
+	}
+	
+	section.about-img-mobile{
+		display: block;
+		width:100%;
+		background-color: $gridLtBlue;
+		
+		@media#{$tablet}{
+			display: none;
+		}
+
+		ul.about-contact{
+			font-family: $fontNun;
+			width: 65%;
+			height: 90%;
+			margin: 2% auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			li{
+				font-size:1.2em;
+				line-height: 1.4em;
+			}
+			h3{
+				font-family: $fontUnica;			font-size: 2em;
+			}
+		}
+
+		img{
+			width: 30%;
+			float: right;
+		}
+		
+	}
+
+	.about-img-tab{
+		display:none;
+		width:40%;
+		background-color: $gridLtBlue;
+		@media#{$tablet}{
+			display: block;
+		}
+	}
+
+	.tab1{
+		background-image: url("/dist/img/chelsea.jpg");
+		background-size: cover;
+		background-position: center;
+	}
+	
+	
+	.about-text{
+		background-color:$gridLink;
+		width:100%;
+		height: 100%;
+		padding:2%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		color:$gridBlack;
+		font-family: $fontOpen;
+		font-weight: bold;
+
+		@media#{$tablet}{
+			width: 60%;
+		}
+		h3{
+			font-family: $fontUnica;
+			font-size: 2em;
+		}
+		p{
+			width: 90%;
+			text-align: center;
+			line-height: 1.5em;
+			margin: 1% auto;
+			padding:1%;
+		}
+		ul.about-me-list{
+			width: 90%;
+			height: 100%;
+			margin: 2% auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			li{
+				line-height: 2em;
+			}
+		}
+	}
+	
+	.at2{
+		background-color: $gridGold;
+	}
+}
+
+ 

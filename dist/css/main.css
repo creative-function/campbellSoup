@@ -77,98 +77,93 @@ html, body {
 }
 
 body {
-	background: #fcc653;
-	max-width: 1200px;
-	margin: 0 auto;
-	overflow: hidden;
-}
-
-@media (min-width: 600px) {
-	body {
-		background-color: #d25941;
-	}
+	background: #FFFFFF;
 }
 
 /* 2. Content ================================= */
-.overflow-wrapper {
+section#nav-section {
 	width: 100%;
-	height: auto;
-	overflow: hidden;
+	border-bottom: 3px white solid;
 }
 
-.overflow-wrapper .about-me {
+section#nav-section .nav-menu {
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	        flex-direction: column;
-	-webkit-box-pack: justify;
-	        justify-content: space-between;
-	width: 100%;
 }
 
 @media (min-width: 600px) {
-	.overflow-wrapper .about-me {
+	section#nav-section .nav-menu {
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
 		        flex-direction: row;
-		flex-direction: row-reverse;
+		-webkit-box-pack: justify;
+		        justify-content: space-between;
 	}
 }
 
-.overflow-wrapper .about-me .bkgrnd-angle {
-	position: absolute;
-	top: -45%;
-	z-index: -100;
-	width: 170%;
-	height: 170%;
-	-webkit-transform-origin: top left;
-	        transform-origin: top left;
-	background-color: #f90c38;
-	border-color: transparent transparent #000000 transparent;
-	-webkit-transform: rotate(45deg);
-	        transform: rotate(45deg);
+section#nav-section .nav-menu .nav-logo {
+	max-width: 30%;
+	margin: 0 auto;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: center;
+	        align-items: center;
 }
 
-@media (min-width: 600px) {
-	.overflow-wrapper .about-me .bkgrnd-angle {
-		background-color: #fcc653;
-	}
-}
-
-.overflow-wrapper .about-me .column {
+section#nav-section .nav-menu .nav-logo img {
 	width: 100%;
 }
 
 @media (min-width: 600px) {
-	.overflow-wrapper .about-me .column {
-		width: 50%;
+	section#nav-section .nav-menu .nav-logo {
+		margin: 0 .5%;
+		width: 9%;
+	}
+	section#nav-section .nav-menu .nav-logo img {
+		width: 100%;
 	}
 }
 
-.overflow-wrapper .about-me .slideshow {
+section#nav-section .nav-menu nav {
+	padding: 20px;
+}
+
+section#nav-section .nav-menu nav ul {
+	color: #173C5C;
+	text-decoration: none;
 	display: -webkit-box;
 	display: flex;
+	font-family: "Open Sans", sans-serif;
+	-webkit-box-pack: center;
+	        justify-content: center;
 }
 
-.overflow-wrapper .about-me .slideshow .slide {
-	display: none;
+section#nav-section .nav-menu nav ul a {
+	padding: 5px;
+	margin: 10px;
+	text-decoration: none;
 }
 
-.overflow-wrapper .about-me .slideshow .slide .picture {
-	position: relative;
-	width: 40%;
-	left: 30%;
+section#nav-section .nav-menu nav ul a li:hover {
+	color: #F5821f;
 }
 
-@media (min-width: 600px) {
-	.overflow-wrapper .about-me .slideshow .slide .picture {
-		width: 80%;
-		left: 20%;
-	}
+section#nav-section .nav-menu nav ul a:visited {
+	text-decoration: none;
+	color: #23A2BF;
 }
 
-.overflow-wrapper .about-me .bio {
+section#titleCap {
+	background-image: url("/dist/img/baby-dots.webp");
+	padding: 1%;
+}
+
+section#titleCap .page-title {
+	margin: 0 auto;
+	width: 100%;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
@@ -176,43 +171,618 @@ body {
 	        flex-direction: column;
 	-webkit-box-pack: center;
 	        justify-content: center;
-	padding: 5%;
-	font-family: "Josefin Sans", sans-serif;
-	font-size: 1rem;
-	line-height: 1.4rem;
 }
 
-.overflow-wrapper .about-me .bio h1 {
-	font-family: "Josefin Sans", sans-serif;
-	font-size: 2.25em;
-	margin: 2%;
-}
-
-.overflow-wrapper .about-me .bio h2 {
-	font-family: "Josefin Sans", sans-serif;
-	font-size: 2rem;
-	margin: 4%;
-}
-
-.overflow-wrapper .about-me .bio p {
+section#titleCap .page-title .cc-name-imgs {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
+	flex-wrap: wrap;
+	-webkit-box-pack: space-evenly;
+	        justify-content: space-evenly;
+	-webkit-box-align: center;
+	        align-items: center;
 	width: 100%;
-	margin: 4%;
+	margin: 0 auto;
+}
+
+section#titleCap .page-title .cc-name-imgs img.cc-logo-dtop {
+	display: none;
+}
+
+@media (min-width: 1200px) {
+	section#titleCap .page-title .cc-name-imgs img.cc-logo-dtop {
+		display: block;
+	}
+}
+
+section#titleCap .page-title .job-title {
+	font-family: "Unica One", cursive;
+	font-size: 2em;
+	color: #23A2BF;
+	padding: 10px;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: center;
+	        justify-content: center;
+}
+
+section#titleCap .page-title .job-title h2 {
+	text-align: center;
+}
+
+@media (min-width: 600px) {
+	section#titleCap .page-title .job-title h2 {
+		margin-right: 35px;
+	}
+}
+
+section#portfolio.layout.layout-portfolio {
+	padding: 20px 0;
+	background-color: #09141e;
+}
+
+section#portfolio.layout.layout-portfolio .container {
+	width: 95%;
+	margin: 0 auto;
+	max-width: 1440px;
+	position: relative;
+}
+
+section#portfolio.layout.layout-portfolio .portfolio-grid {
+	padding: 25px 0;
+	position: relative;
+	display: -webkit-box;
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	        justify-content: space-between;
+}
+
+section#portfolio.layout.layout-portfolio .portfolio-grid .single-project {
+	width: 100%;
+	text-align: center;
+	margin: 15px 0;
+	position: relative;
+	padding: 0 15px;
+	height: 275px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+
+section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo2, section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo10 {
+	background-size: 15%;
+	background-repeat: repeat-x;
+	background-position-y: 85%;
+}
+
+section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo8, section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo11, section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo12, section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo13, section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo16, section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo19, section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo21, section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo23, section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo24 {
+	background-size: contain;
+}
+
+section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo6 {
+	background-size: 60%;
+}
+
+section#portfolio.layout.layout-portfolio .portfolio-grid .single-project.sp-photo7 {
+	background-position-y: 5%;
+}
+
+@media (min-width: 768px) {
+	section#portfolio.layout.layout-portfolio .portfolio-grid .single-project {
+		width: 49%;
+		height: 250px;
+	}
+}
+
+@media (min-width: 600px) {
+	section#portfolio.layout.layout-portfolio .portfolio-grid .single-project {
+		width: 29%;
+		height: 200px;
+	}
+}
+
+@media (min-width: 1200px) {
+	section#portfolio.layout.layout-portfolio .portfolio-grid .single-project {
+		width: 24%;
+		height: 200px;
+	}
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo1 {
+	background-image: url("/dist/img/tsr+cover@2x.jpg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo2 {
+	background-image: url("/dist/img/history-img.png");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo3 {
+	background-image: url("/dist/img/adidas-img.png");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo4 {
+	background-image: url("/dist/img/redFight.png");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo5 {
+	background-image: url("/dist/img/BG.welcome.png");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo6 {
+	background-image: url("/dist/img/airBnBlogo.png");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo7 {
+	background-image: url("/dist/img/brazilbg1.jpg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo8 {
+	background-image: url("/dist/img/brazilbg1.jpg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo9 {
+	background-image: url("/dist/img/mailchimp.png");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo10 {
+	background-image: url("/dist/img/news1.png");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo11 {
+	background-image: url("/dist/img/news4.webp");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo12 {
+	background-image: url("/dist/img/news3.webp");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo13 {
+	background-image: url("/dist/img/chat1.png");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo14 {
+	background-image: url("/dist/img/stamp1.png");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo15 {
+	background-image: url("/dist/img/chelsea.jpg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo16 {
+	background-image: url("/dist/img/social1.png");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo17 {
+	background-image: url("/dist/img/toDOimg.png");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo18 {
+	background-image: url("/dist/img/travel-720.jpg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo19 {
+	background-image: url("/dist/img/imgAIW.png");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo20 {
+	background-image: url("/dist/img/BG1.daisies.jpg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo21 {
+	background-image: url("/dist/img/beanLight.svg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo22 {
+	background-image: url("/dist/img/clc-img.jpeg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo23 {
+	background-image: url("/dist/img/semiColon.png");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo24 {
+	background-image: url("/dist/img/EELogo.png");
+}
+
+section#portfolio.layout.layout-portfolio .inner .img-overlay {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(22, 59, 91, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+section#portfolio.layout.layout-portfolio .inner .img-overlay .text-container {
+	position: absolute;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	justify-content: space-around;
+	top: 50%;
+	left: 0;
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	width: 100%;
+	height: 175px;
+	padding: 0 20px;
+	background-color: rgba(22, 59, 91, 0.5);
+}
+
+@media (min-width: 1200px) {
+	section#portfolio.layout.layout-portfolio .inner .img-overlay .text-container {
+		height: unset;
+	}
+}
+
+section#portfolio.layout.layout-portfolio .inner .img-overlay .text-container .project-name {
+	color: #23A2BF;
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 1.5em;
+}
+
+section#portfolio.layout.layout-portfolio .inner .img-overlay .text-container .project-label {
+	color: #f4d197;
+	font-family: "Open Sans", sans-serif;
+	font-size: .8em;
+	font-weight: bold;
+}
+
+section#portfolio.layout.layout-portfolio .inner .img-overlay .text-container .project-subtitle {
+	display: block;
+	color: #f4d197;
+	font-family: "Open Sans", sans-serif;
+}
+
+@media (min-width: 1200px) {
+	section#portfolio.layout.layout-portfolio .inner .img-overlay .text-container .project-subtitle {
+		display: none;
+		margin-top: 10px;
+	}
+}
+
+section#portfolio.layout.layout-portfolio .inner .img-overlay .text-container .project-subtitle ul.skills {
+	width: 100%;
+	height: 175px;
 	padding: 2%;
+	display: -webkit-box;
+	display: flex;
+	flex-wrap: wrap;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	justify-content: space-around;
+	list-style-type: square;
+	background-color: #173C5C;
 }
 
-.overflow-wrapper .about-me .bio button {
-	width: 50%;
-	height: 50px;
-	margin: 4%;
-	background-color: #d25941;
-	font-size: 1rem;
-	font-family: "Josefin Sans", sans-serif;
+section#portfolio.layout.layout-portfolio .inner .img-overlay .text-container .project-subtitle ul.skills h4 {
+	color: #23A2BF;
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 1.2em;
 }
 
-.overflow-wrapper footer {
+section#portfolio.layout.layout-portfolio .inner .img-overlay .text-container .project-subtitle ul.skills li {
+	font-size: .9em;
+}
+
+@media (min-width: 1200px) {
+	section#portfolio.layout.layout-portfolio .inner .img-overlay:hover .project-subtitle {
+		display: block;
+		-webkit-animation: slideDown .3s ease-in-out forwards;
+		        animation: slideDown .3s ease-in-out forwards;
+		-webkit-transition: all;
+		transition: all;
+	}
+}
+
+section#banner {
 	width: 100%;
-	height: 150px;
-	background-color: #5f0F40;
+	height: 50vh;
+	background-color: #173C5C;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	        align-items: center;
+}
+
+section#banner .title {
+	width: 100%;
+	height: 25%;
+	padding: 2%;
+	text-align: center;
+	font-family: "Nunito Sans", sans-serif;
+	color: #23A2BF;
+	font-size: 2em;
+}
+
+section#banner .ribbon {
+	width: 100%;
+	height: 50%;
+	background-color: rgba(68, 82, 96, 0.4);
+	background-image: url("/dist/img/baby-dots.webp");
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	-webkit-box-align: center;
+	        align-items: center;
+}
+
+section#banner .ribbon .icon {
+	width: 100px;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: center;
+	        justify-content: center;
+}
+
+section#banner .ribbon .icon img.abc {
+	width: 45%;
+}
+
+@media (min-width: 600px) {
+	section#banner .ribbon .icon img.abc {
+		width: 80%;
+	}
+}
+
+section#banner .ribbon .icon img.def {
+	width: 55%;
+}
+
+@media (min-width: 600px) {
+	section#banner .ribbon .icon img.def {
+		width: 100%;
+	}
+}
+
+/* 
+
+homework:
+kill animations in mobile, trigger animnations at 1040px and above (make variable for it)
+canyonroadfilms.com/directors
+// free use images, set as css background 
+//image overlay
+//title with animation
+*/
+@-webkit-keyframes slideDown {
+	50% {
+		-webkit-transform: scale(2);
+		        transform: scale(2);
+	}
+	90% {
+		-webkit-transform: translateY(70%);
+		        transform: translateY(70%);
+		-webkit-transform: rotate(20deg);
+		        transform: rotate(20deg);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+	}
+}
+@keyframes slideDown {
+	50% {
+		-webkit-transform: scale(2);
+		        transform: scale(2);
+	}
+	90% {
+		-webkit-transform: translateY(70%);
+		        transform: translateY(70%);
+		-webkit-transform: rotate(20deg);
+		        transform: rotate(20deg);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+	}
+}
+
+section#about-layout {
+	max-width: 80%;
+	margin: 0 auto;
+	height: 50vh;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
+	flex-wrap: wrap;
+	position: relative;
+	-webkit-box-pack: center;
+	        justify-content: center;
+}
+
+@media (min-width: 600px) {
+	section#about-layout {
+		width: 100%;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		        flex-direction: row;
+	}
+}
+
+section#about-layout section#about-me {
+	display: -webkit-box;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	border: 2px dashed #f4d197;
+}
+
+@media (min-width: 600px) {
+	section#about-layout section#about-me {
+		width: 90%;
+	}
+}
+
+section#about-layout section#about-work {
+	width: 100%;
+	border: 2px dashed #23A2BF;
+	display: -webkit-box;
+	display: flex;
+}
+
+@media (min-width: 600px) {
+	section#about-layout section#about-work {
+		width: 90%;
+		-webkit-box-pack: end;
+		        justify-content: flex-end;
+	}
+}
+
+section#about-layout section#about-work ul.about-contact {
+	font-family: "Nunito Sans", sans-serif;
+	width: 90%;
+	height: 90%;
+	margin: 2% auto;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	justify-content: space-around;
+}
+
+section#about-layout section#about-work ul.about-contact li {
+	font-size: 1.2em;
+}
+
+section#about-layout section#about-work ul.about-contact h3 {
+	font-family: "Unica One", cursive;
+	font-size: 2em;
+}
+
+section#about-layout section.about-img-mobile {
+	display: block;
+	width: 100%;
+	background-color: #bae7ff;
+}
+
+@media (min-width: 600px) {
+	section#about-layout section.about-img-mobile {
+		display: none;
+	}
+}
+
+section#about-layout section.about-img-mobile ul.about-contact {
+	font-family: "Nunito Sans", sans-serif;
+	width: 65%;
+	height: 90%;
+	margin: 2% auto;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	justify-content: space-around;
+}
+
+section#about-layout section.about-img-mobile ul.about-contact li {
+	font-size: 1.2em;
+	line-height: 1.4em;
+}
+
+section#about-layout section.about-img-mobile ul.about-contact h3 {
+	font-family: "Unica One", cursive;
+	font-size: 2em;
+}
+
+section#about-layout section.about-img-mobile img {
+	width: 30%;
+	float: right;
+}
+
+section#about-layout .about-img-tab {
+	display: none;
+	width: 40%;
+	background-color: #bae7ff;
+}
+
+@media (min-width: 600px) {
+	section#about-layout .about-img-tab {
+		display: block;
+	}
+}
+
+section#about-layout .tab1 {
+	background-image: url("/dist/img/chelsea.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+section#about-layout .about-text {
+	background-color: #23A2BF;
+	width: 100%;
+	height: 100%;
+	padding: 2%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	-webkit-box-pack: space-evenly;
+	        justify-content: space-evenly;
+	-webkit-box-align: center;
+	        align-items: center;
+	color: #09141e;
+	font-family: "Open Sans", sans-serif;
+	font-weight: bold;
+}
+
+@media (min-width: 600px) {
+	section#about-layout .about-text {
+		width: 60%;
+	}
+}
+
+section#about-layout .about-text h3 {
+	font-family: "Unica One", cursive;
+	font-size: 2em;
+}
+
+section#about-layout .about-text p {
+	width: 90%;
+	text-align: center;
+	line-height: 1.5em;
+	margin: 1% auto;
+	padding: 1%;
+}
+
+section#about-layout .about-text ul.about-me-list {
+	width: 90%;
+	height: 100%;
+	margin: 2% auto;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+	-webkit-box-pack: justify;
+	        justify-content: space-between;
+}
+
+section#about-layout .about-text ul.about-me-list li {
+	line-height: 2em;
+}
+
+section#about-layout .at2 {
+	background-color: #f4d197;
 }
 
 /*# sourceMappingURL=main.css.map */
